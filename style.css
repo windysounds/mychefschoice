@@ -1,16 +1,18 @@
-/* 보내주신 CSS를 기반으로 통합 */
+/* 당신이 보내주신 코드를 기반으로, 문제를 수정한 최종 버전 */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
 
+/* 기본 스타일 */
 body {
     font-family: 'Noto Sans KR', sans-serif;
     background-color: #f5f5f5;
-    /* align-items: center 속성 제거하여 푸터가 하단에 잘 붙도록 함 */
     display: flex;
     justify-content: center;
+    /* ★★★★★ 이 속성을 다시 추가하여 수직 중앙 정렬을 복구합니다 ★★★★★ */
+    align-items: center; 
     min-height: 100vh;
     margin: 0;
-    padding-bottom: 80px; /* 푸터 공간 확보 */
 }
+
 .container {
     background: white;
     padding: 40px;
@@ -19,69 +21,144 @@ body {
     text-align: center;
     max-width: 500px;
     width: 90%;
-    margin-top: 80px; /* 언어 선택기 공간 확보 */
+    /* 이제 body가 중앙 정렬을 해주므로, 불필요한 margin-top을 제거합니다. */
 }
-.hidden { display: none !important; }
 
-/* 언어 선택기 */
-#lang-switcher {
-    position: absolute; top: 20px; left: 50%;
-    transform: translateX(-50%); display: flex; gap: 10px;
+.hidden {
+    display: none !important;
 }
+
+/* 언어 선택기 스타일 (상단 중앙) */
+#lang-switcher {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 100; /* 다른 요소 위에 오도록 z-index 추가 */
+}
+
 #lang-switcher button {
-    background: #ffffff; border: 1px solid #ddd; padding: 8px 16px;
-    cursor: pointer; font-size: 0.9em; color: #333; font-weight: bold;
-    border-radius: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: #ffffff;
+    border: 1px solid #ddd;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 0.9em;
+    color: #333;
+    font-weight: bold;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: all 0.2s ease-in-out;
 }
-#lang-switcher button.active { background-color: #007bff; color: white; border-color: #007bff; }
-#lang-switcher button:not(.active):hover { background-color: #f0f0f0; }
+
+#lang-switcher button.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+#lang-switcher button:not(.active):hover {
+    background-color: #f0f0f0;
+}
 
 /* 시작 화면 */
-.intro .chef-image { /* JS에서 추가될 intro 이미지 스타일 */
-    width: 180px; height: 180px; border-radius: 50%; object-fit: cover;
-    margin-bottom: 20px; background-color: #ccc;
+.intro h1 {
+    margin-bottom: 30px;
 }
-.intro h1 { margin-bottom: 30px; }
 
 /* 질문 영역 */
-.question-box { animation: fadeIn 0.5s ease-in-out; }
-.question-box h3 { margin-bottom: 20px; font-size: 1.4em; }
-.options { display: flex; flex-direction: column; gap: 10px; }
+.question-box {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.question-box h3 {
+    margin-bottom: 20px;
+    font-size: 1.4em;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .options button {
-    background-color: #eee; border: 1px solid #ddd; padding: 15px;
-    border-radius: 8px; cursor: pointer; font-size: 1em;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
     transition: background-color 0.2s, color 0.2s;
 }
-.options button:hover { background-color: #ddd; }
+
+.options button:hover {
+    background-color: #ddd;
+}
 
 /* 결과 영역 */
-#result-container { animation: fadeIn 0.5s ease-in-out; }
-#result-container .chef-image {
-    width: 180px; height: 180px; border-radius: 50%; object-fit: cover;
-    margin-bottom: 20px; background-color: #ccc;
+#result-container {
+    animation: fadeIn 0.5s ease-in-out;
 }
-#food-name { color: #d32f2f; font-size: 1.8em; }
+
+.chef-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    background-color: #ccc;
+}
+
+#food-name {
+    color: #d32f2f;
+    font-size: 1.8em;
+}
 
 /* 버튼 공통 */
 #start-btn, #retry-btn {
-    background-color: #28a745; color: white; border: none;
-    padding: 12px 25px; font-size: 1.1em; border-radius: 8px;
-    cursor: pointer; margin-top: 20px; transition: background-color 0.2s;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.2s;
 }
-#start-btn:hover, #retry-btn:hover { background-color: #218838; }
 
-/* 하단 문구 */
+#start-btn:hover, #retry-btn:hover {
+    background-color: #218838;
+}
+
+/* 하단 문구 스타일 (disclaimer) */
 #disclaimer {
-    position: fixed; bottom: 60px; /* site-footer 위로 오도록 위치 조정 */
-    left: 0; width: 100%; text-align: center; padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7); color: white;
-    font-size: 0.8em; animation: fadeIn 0.5s ease-in-out; z-index: 10;
+    position: fixed;
+    /* site-footer 위로 오도록 bottom 위치 조정 */
+    bottom: 60px; 
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 0.8em;
+    animation: fadeIn 0.5s ease-in-out;
+    z-index: 10;
 }
 
-/* ★★★ 추가된 스타일: 정적 페이지 & 푸터 ★★★ */
+/* 페이드인 애니메이션 */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ★★★ SPA 페이지와 하단 푸터를 위한 스타일 ★★★ */
 #static-content {
-    text-align: left; animation: fadeIn 0.5s ease-in-out;
+    text-align: left;
+    animation: fadeIn 0.5s ease-in-out;
 }
 #static-content h1 { text-align: center; font-size: 1.8em; margin-bottom: 20px; }
 #static-content h2 { font-size: 1.4em; margin-top: 30px; margin-bottom: 10px; color: #007bff; }
@@ -91,9 +168,15 @@ body {
 }
 
 .site-footer {
-    position: fixed; bottom: 0; left: 0; width: 100%;
-    background-color: #fff; border-top: 1px solid #e0e0e0;
-    padding: 10px 0; text-align: center; font-size: 0.9em;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border-top: 1px solid #e0e0e0;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 0.9em;
     z-index: 20;
 }
 .footer-links button.nav-btn {
@@ -103,8 +186,3 @@ body {
 }
 .footer-links button.nav-btn:hover { text-decoration: underline; }
 .copyright { color: #888; margin-top: 5px; font-size: 0.8em; }
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
