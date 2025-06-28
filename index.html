@@ -4,27 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>셰프의 메뉴 추천</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- ★★★★★ 언어 선택기를 container 바깥으로 이동 ★★★★★ -->
     <div id="lang-switcher">
         <button data-lang="ko" class="active">한국어</button>
         <button data-lang="en">English</button>
     </div>
 
     <div class="container">
-        <!-- 이제 이 안에는 언어 선택기가 없습니다. -->
+        <!-- Version B의 메인 콘텐츠 영역 -->
         <main id="main-content">
-            <header class="intro">
+            <div class="intro">
+                <!-- JS가 intro-chef-image.png를 추가할 영역 -->
                 <h1 id="intro-title"></h1>
                 <button id="start-btn"></button>
-            </header>
-            <div id="question-area" class="hidden">
             </div>
+            <div id="question-area" class="hidden"></div>
         </main>
+
+        <!-- Version B의 결과 영역 -->
         <section id="result-container" class="hidden">
-            <img id="chef-image" src="" alt="근엄한 셰프" class="chef-image">
+            <img id="chef-image" src="chef-result.png" alt="추천하는 셰프" class="chef-image">
             <h2 id="result-title"></h2>
             <div id="food-recommendation">
                 <h3 id="food-name"></h3>
@@ -32,10 +34,29 @@
             </div>
             <button id="retry-btn"></button>
         </section>
+
+        <!-- ★★★ Version A의 소개/개인정보 페이지가 표시될 영역 ★★★ -->
+        <section id="static-content" class="hidden"></section>
     </div>
-    <footer class="disclaimer hidden">
+
+    <!-- Version B의 하단 문구 영역 -->
+    <footer id="disclaimer" class="disclaimer hidden">
         <p id="disclaimer-text"></p>
     </footer>
+
+    <!-- ★★★ Version A의 페이지 이동 푸터 ★★★ -->
+    <footer id="site-footer" class="site-footer">
+        <div class="footer-links">
+            <button class="nav-btn" data-page="home">홈</button> |
+            <button class="nav-btn" data-page="about">소개</button> |
+            <button class="nav-btn" data-page="privacy">개인정보 처리방침</button> |
+            <button class="nav-btn" data-page="contact">문의하기</button>
+        </div>
+        <div class="copyright">
+            © 2024 My Chef. All Rights Reserved.
+        </div>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
