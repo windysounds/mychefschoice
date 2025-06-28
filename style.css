@@ -1,148 +1,40 @@
-/* 기본 스타일 */
-body {
-    font-family: 'Noto Sans KR', sans-serif;
-    background-color: #f5f5f5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>셰프의 메뉴 추천</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- ★★★★★ 언어 선택기를 container 안으로 이동 ★★★★★ -->
+        <div id="lang-switcher">
+            <button data-lang="ko" class="active">한국어</button>
+            <button data-lang="en">English</button>
+        </div>
 
-.container {
-    background: white;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    text-align: center;
-    max-width: 500px;
-    width: 90%;
-}
-
-.hidden {
-    display: none !important;
-}
-
-/* 언어 선택기 스타일 (상단 중앙) */
-#lang-switcher {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    gap: 5px;
-}
-
-#lang-switcher button {
-    background: #f0f0f0;
-    border: 1px solid #ddd;
-    padding: 5px 12px;
-    cursor: pointer;
-    font-size: 0.9em;
-    color: #555;
-    font-weight: bold;
-    border-radius: 15px;
-    transition: all 0.2s ease-in-out;
-}
-
-#lang-switcher button.active {
-    background-color: #007bff;
-    color: white;
-    border-color: #007bff;
-}
-
-
-/* 시작 화면 */
-.intro h1 {
-    margin-bottom: 30px;
-}
-
-/* 질문 영역 */
-.question-box {
-    animation: fadeIn 0.5s ease-in-out;
-}
-
-.question-box h3 {
-    margin-bottom: 20px;
-    font-size: 1.4em;
-}
-
-.options {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.options button {
-    background-color: #eee;
-    border: 1px solid #ddd;
-    padding: 15px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.2s, color 0.2s;
-}
-
-.options button:hover {
-    background-color: #ddd;
-}
-
-/* 결과 영역 */
-#result-container {
-    animation: fadeIn 0.5s ease-in-out;
-}
-
-.chef-image {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-    background-color: #ccc;
-}
-
-#food-name {
-    color: #d32f2f;
-    font-size: 1.8em;
-}
-
-/* 버튼 공통 */
-#start-btn, #retry-btn {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    font-size: 1.1em;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: background-color 0.2s;
-}
-
-#start-btn:hover, #retry-btn:hover {
-    background-color: #218838;
-}
-
-/* 하단 문구 스타일 */
-.disclaimer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    font-size: 0.8em;
-    animation: fadeIn 0.5s ease-in-out;
-}
-
-/* 페이드인 애니메이션 */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+        <main id="main-content">
+            <header class="intro">
+                <h1 id="intro-title"></h1>
+                <button id="start-btn"></button>
+            </header>
+            <div id="question-area" class="hidden">
+            </div>
+        </main>
+        <section id="result-container" class="hidden">
+            <img id="chef-image" src="" alt="근엄한 셰프" class="chef-image">
+            <h2 id="result-title"></h2>
+            <div id="food-recommendation">
+                <h3 id="food-name"></h3>
+                <p id="food-description"></p>
+            </div>
+            <button id="retry-btn"></button>
+        </section>
+    </div>
+    <footer class="disclaimer hidden">
+        <p id="disclaimer-text"></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
