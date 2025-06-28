@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- 1. 데이터베이스 (질문 풀 확장 및 음식 추가) ---
+    // --- 1. 데이터베이스 ---
     const allQuestions = [
         { id: 'q_reason', text: '오늘 메뉴를 고민하는 진짜 이유는?', options: [
             { text: '가볍게 먹고 싶어서', tags: ['#가벼운', '#건강한'] },
@@ -8,45 +8,55 @@ document.addEventListener('DOMContentLoaded', () => {
             { text: '만들기 귀찮아서', tags: ['#간편한', '#배달'] }
         ]},
         { id: 'q_staple', text: '가장 익숙한 주식은 무엇인가요?', options: [
-            { text: '빵', tags: ['#서양식', '#빵'] },
-            { text: '면', tags: ['#면요리', '#글로벌'] },
-            { text: '밥', tags: ['#한식', '#아시안', '#밥'] }
+            { text: '빵', tags: ['#빵', '#서양식'] },
+            { text: '면', tags: ['#면요리'] },
+            { text: '밥', tags: ['#밥', '#한식', '#아시안'] }
         ]},
         { id: 'q_hunger', text: '지금 허기진 정도는 어떤가요?', options: [
-            { text: '배가 너무 고파요', tags: ['#든든한', '#푸짐한'] },
-            { text: '그냥 밥 먹을 때라서', tags: ['#적당한', '#평범한'] },
-            { text: '눈앞에 음식이 떠다녀요', tags: ['#특이한', '#기분전환'] }
+            { text: '배가 너무 고파요', tags: ['#푸짐한'] },
+            { text: '그냥 밥 먹을 때라서', tags: ['#적당한'] },
+            { text: '눈앞에 음식이 떠다녀요', tags: ['#기분전환'] }
         ]},
         { id: 'q_yesterday', text: '어제 저녁 식사는 어땠나요?', options: [
             { text: '과하게 먹었어요', tags: ['#가벼운', '#샐러드'] },
             { text: '건강하지 못했어요', tags: ['#건강한', '#집밥'] },
-            { text: '다이어트식이었어요', tags: ['#든든한', '#보상'] }
+            { text: '다이어트식이었어요', tags: ['#보상', '#든든한'] }
         ]},
-        { id: 'q_location', text: '지금 어디에 계신가요?', options: [
-            { text: '집', tags: ['#집밥', '#배달'] },
-            { text: '밖', tags: ['#외식'] },
-            { text: '회사/학교', tags: ['#간편한', '#가성비'] }
+        { id: 'q_sports', text: '지금 떠오르는 스포츠는?', isDynamic: true, options: [
+            { text: '축구', tags: ['#에너지'] }, { text: '야구', tags: ['#여유'] }, 
+            { text: '농구', tags: ['#활기찬'] }, { text: '핸드볼', tags: ['#팀워크'] },
+            { text: '배구', tags: ['#높이'] }, { text: '탁구', tags: ['#집중'] },
+            { text: '배드민턴', tags: ['#가벼운'] }, { text: '테니스', tags: ['#파워'] }
         ]},
-        { id: 'q_color', text: '마음에 드는 색깔을 하나 골라보세요.', isColor: true, // 색깔 질문을 위한 특별 속성
-          options: [
-            { text: '빨강' }, { text: '주황' }, { text: '노랑' }, { text: '초록' },
-            { text: '파랑' }, { text: '남색' }, { text: '보라' }, { text: '분홍' },
-            { text: '검정' }, { text: '하양' }, { text: '회색' }, { text: '금색' }
+        { id: 'q_drink', text: '식후에 마시고 싶은 것은?', isDynamic: true, options: [
+            { text: '커피', tags: ['#집중', '#여유'] }, { text: '차(Tea)', tags: ['#차분한', '#따뜻한'] },
+            { text: '시원한 물', tags: ['#상쾌한'] }, { text: '뜨거운 물', tags: ['#따뜻한'] },
+            { text: '탄산음료', tags: ['#짜릿한', '#기분전환'] }, { text: '에너지 드링크', tags: ['#에너지', '#파워'] }
+        ]},
+        { id: 'q_weather', text: '지금 날씨는 어떤가요?', options: [
+            { text: '흐림', tags: ['#따뜻한', '#국물'] },
+            { text: '맑음', tags: ['#상쾌한', '#가벼운'] },
+            { text: '비 혹은 눈', tags: ['#따뜻한', '#배달', '#집밥'] }
+        ]},
+        { id: 'q_color', text: '마음에 드는 색깔을 하나 골라보세요.', isColor: true, options: [
+            { text: '빨강' }, { text: '주황' }, { text: '노랑' }, { text: '초록' }, { text: '파랑' }, 
+            { text: '남색' }, { text: '보라' }, { text: '분홍' }, { text: '검정' }, { text: '하양' }
         ]}
     ];
 
     const foodDB = [
-        { name: '김치찌개와 계란말이', description: '집밥의 정석. 따뜻하고 든든하게 속을 채워줍니다.', tags: ['#집밥', '#한식', '#든든한', '#밥'] },
-        { name: '크림 리조또', description: '부드러운 쌀과 크림의 조화. 특별한 기분전환이 될 거예요.', tags: ['#서양식', '#밥', '#기분전환', '#보상']},
-        { name: '따끈한 쌀국수', description: '담백한 국물이 당신을 위로해줄 겁니다.', tags: ['#외식', '#아시안', '#면요리', '#가벼운'] },
-        { name: '수제버거와 감자튀김', description: '활기찬 에너지가 필요할 땐, 역시 이거죠!', tags: ['#외식', '#서양식', '#빵', '#푸짐한', '#보상'] },
-        { name: '편의점 도시락 세트', description: '빠르고 간편하게, 하지만 알차게 즐기는 한 끼.', tags: ['#간편한', '#가성비', '#평범한'] },
-        { name: '간장계란밥', description: '요리하기 귀찮을 때, 5분이면 완성되는 최고의 선택.', tags: ['#집밥', '#한식', '#밥', '#간편한'] },
-        { name: '콥 샐러드', description: '어제 과식했다면 오늘은 가볍고 건강하게!', tags: ['#가벼운', '#건강한', '#샐러드', '#외식'] },
-        { name: '매콤한 마라샹궈', description: '눈앞에 음식이 아른거린다면? 이 강력한 맛으로 해결!', tags: ['#특이한', '#기분전환', '#외식', '#아시안']}
+        { name: '스시', description: '넌 지금 와사비가 필요해.', tags: ['#밥', '#아시안', '#상쾌한', '#집중'] },
+        { name: '갈비', description: '달콤하고 진한 맛을 느껴봐.', tags: ['#밥', '#한식', '#푸짐한', '#보상', '#팀워크'] },
+        { name: '빵 (베이커리)', description: '빵 하나면 충분해. 그래야 내일 고민 안 할 거야.', tags: ['#빵', '#서양식', '#가벼운', '#여유'] },
+        { name: '샌드위치', description: '가장 맛있는 조합은 네 입이 알고 있어.', tags: ['#빵', '#건강한', '#가벼운', '#적당한'] },
+        { name: '치킨', description: '언제나 옳아. 바삭한 튀김을 느껴봐.', tags: ['#배달', '#푸짐한', '#보상', '#짜릿한', '#에너지'] },
+        { name: '김밥', description: '널 위한 선물 세트야. 야채를 챙겨야 할 때가 됐지?', tags: ['#밥', '#한식', '#간편한', '#건강한'] },
+        { name: '파스타', description: '면이 주는 위로를 느껴봐.', tags: ['#면요리', '#서양식', '#기분전환', '#따뜻한'] },
+        { name: '피자', description: '다 함께 즐기는 최고의 선택!', tags: ['#빵', '#서양식', '#팀워크', '#푸짐한', '#배달'] },
+        { name: '라면', description: '세상에서 가장 완벽한 국물 요리 중 하나.', tags: ['#면요리', '#국물', '#간편한', '#짜릿한'] }
     ];
 
-    // --- 2. 요소 선택 (변경 없음) ---
+    // --- 2. 요소 선택 ---
     const mainContent = document.getElementById('main-content');
     const introScreen = document.querySelector('.intro');
     const startBtn = document.getElementById('start-btn');
@@ -56,44 +66,56 @@ document.addEventListener('DOMContentLoaded', () => {
     const foodNameEl = document.getElementById('food-name');
     const foodDescEl = document.getElementById('food-description');
     const retryBtn = document.getElementById('retry-btn');
+    const disclaimer = document.querySelector('.disclaimer'); // 하단 문구 요소
 
-    // --- 3. 상태 변수 (변경 없음) ---
+    // --- 3. 상태 변수 ---
     let selectedQuestions = [];
     let currentQuestionIndex = 0;
     let userTags = [];
 
     // --- 4. 함수 ---
 
-    // 게임 시작
-    function startGame() {
+    function showScreen(screen) {
+        // 모든 화면 숨기기
         introScreen.classList.add('hidden');
-        questionArea.classList.remove('hidden');
+        questionArea.classList.add('hidden');
         resultContainer.classList.add('hidden');
-        mainContent.classList.remove('hidden');
+        disclaimer.classList.add('hidden');
+        mainContent.classList.add('hidden');
 
+        // 요청된 화면만 보여주기
+        if (screen === 'intro') {
+            introScreen.classList.remove('hidden');
+            mainContent.classList.remove('hidden');
+        } else if (screen === 'question') {
+            questionArea.classList.remove('hidden');
+            mainContent.classList.remove('hidden');
+        } else if (screen === 'result') {
+            resultContainer.classList.remove('hidden');
+            disclaimer.classList.remove('hidden'); // 결과 화면에서만 문구 표시
+        }
+    }
+
+    function startGame() {
+        showScreen('question');
         currentQuestionIndex = 0;
         userTags = [];
-        
         const shuffled = [...allQuestions].sort(() => 0.5 - Math.random());
         selectedQuestions = shuffled.slice(0, 3);
-        
         displayQuestion();
     }
 
-    // 질문 표시 (색깔 질문 로직 추가)
     function displayQuestion() {
         const question = selectedQuestions[currentQuestionIndex];
         let currentOptions = question.options;
 
-        // ★★★★★ 색깔 질문 특별 처리 ★★★★★
-        if (question.isColor) {
-            const shuffledColors = [...question.options].sort(() => 0.5 - Math.random());
-            currentOptions = shuffledColors.slice(0, 4); // 4개의 랜덤 색상 보여주기
+        if (question.isDynamic || question.isColor) {
+            const shuffledOptions = [...question.options].sort(() => 0.5 - Math.random());
+            currentOptions = shuffledOptions.slice(0, 3); // 3개의 랜덤 선택지
         }
         
         let optionsHTML = '';
         currentOptions.forEach(opt => {
-            // 태그가 없는 경우(색깔 질문)를 대비해 기본값 설정
             const tags = opt.tags ? opt.tags.join(',') : '';
             optionsHTML += `<button class="option-btn" data-tags="${tags}">${opt.text}</button>`;
         });
@@ -112,10 +134,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-    // 옵션 선택 처리 (변경 없음)
     function handleOptionClick(e) {
         const tags = e.target.dataset.tags.split(',');
-        if (tags[0] !== '') { // 빈 태그는 추가하지 않음
+        if (tags[0] !== '') {
             userTags.push(...tags);
         }
         
@@ -128,8 +149,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // 결과 계산 및 표시 (변경 없음)
     function getRecommendation() {
+        showScreen('result');
         let bestMatch = { food: null, score: -1 };
         
         foodDB.forEach(food => {
@@ -142,16 +163,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            // 가장 높은 점수를 가진 음식을 찾되, 동점일 경우 랜덤성을 부여하기 위해
             if (currentScore > bestMatch.score) {
                 bestMatch = { food, score: currentScore };
             } else if (currentScore === bestMatch.score && Math.random() < 0.5) {
                 bestMatch = { food, score: currentScore };
             }
         });
-
-        mainContent.classList.add('hidden');
-        resultContainer.classList.remove('hidden');
         
         chefImageEl.src = 'chef-result.png';
 
@@ -164,7 +181,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
-    // 초기화 함수 (변경 없음)
     function initializePage() {
         const introChefImage = document.createElement('img');
         introChefImage.src = 'chef-intro.png';
@@ -175,10 +191,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- 5. 이벤트 리스너 연결 ---
     startBtn.addEventListener('click', startGame);
-    
-    // ★★★★★ '다시 추천받기' 버튼 로직 수정 ★★★★★
-    retryBtn.addEventListener('click', startGame); // 이제 이 버튼이 바로 게임을 다시 시작합니다.
+    retryBtn.addEventListener('click', startGame);
 
     // --- 6. 앱 시작 ---
     initializePage();
+    showScreen('intro');
 });
