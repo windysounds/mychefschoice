@@ -25,21 +25,24 @@ body {
 
 /* 언어 선택기 스타일 (상단 중앙) */
 #lang-switcher {
+    position: absolute; /* 페이지 전체를 기준으로 위치 설정 */
+    top: 20px;          /* 페이지 상단에서 20px 아래로 */
+    left: 50%;          /* 페이지 왼쪽에서 50% 지점으로 이동 */
+    transform: translateX(-50%); /* 자기 자신의 너비의 50%만큼 왼쪽으로 이동하여 완벽한 중앙 정렬 */
     display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    gap: 5px;
+    gap: 10px;
 }
 
 #lang-switcher button {
-    background: #f0f0f0;
+    background: #ffffff;
     border: 1px solid #ddd;
-    padding: 5px 12px;
+    padding: 8px 16px;
     cursor: pointer;
     font-size: 0.9em;
-    color: #555;
+    color: #333;
     font-weight: bold;
-    border-radius: 15px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: all 0.2s ease-in-out;
 }
 
@@ -49,6 +52,9 @@ body {
     border-color: #007bff;
 }
 
+#lang-switcher button:not(.active):hover {
+    background-color: #f0f0f0;
+}
 
 /* 시작 화면 */
 .intro h1 {
