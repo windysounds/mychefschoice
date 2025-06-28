@@ -145,3 +145,29 @@ body {
 #lang-switcher button.active {
     color: #007bff;
 }
+/* ... 기존 CSS 코드 맨 아래에 추가 ... */
+
+/* 언어 선택기 스타일 */
+#lang-switcher {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 5px;
+}
+
+#lang-switcher button {
+    background: none;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.9em;
+    color: #555;
+    font-weight: bold;
+}
+
+#lang-switcher button.active {
+    color: #007bff;
+}
