@@ -23,6 +23,33 @@ body {
     display: none !important;
 }
 
+/* 언어 선택기 스타일 (상단 중앙) */
+#lang-switcher {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 5px;
+}
+
+#lang-switcher button {
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 5px 12px;
+    cursor: pointer;
+    font-size: 0.9em;
+    color: #555;
+    font-weight: bold;
+    border-radius: 15px;
+    transition: all 0.2s ease-in-out;
+}
+
+#lang-switcher button.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+
 /* 시작 화면 */
 .intro h1 {
     margin-bottom: 30px;
@@ -64,8 +91,8 @@ body {
 }
 
 .chef-image {
-    width: 180px; /* 크기 확대 */
-    height: 180px; /* 크기 확대 */
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
@@ -118,32 +145,4 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
-}
-#lang-switcher {
-    display: flex;
-    /* justify-content를 flex-end에서 center로 변경 */
-    justify-content: center; 
-    margin-bottom: 20px; /* 아래 컨텐츠와 간격 */
-    gap: 5px;
-}
-
-#lang-switcher button {
-    background: #f0f0f0;
-    border: 1px solid #ddd;
-    padding: 5px 12px;
-    cursor: pointer;
-    font-size: 0.9em;
-    color: #555;
-    font-weight: bold;
-    border-radius: 15px; /* 둥근 버튼 모양 */
-    transition: all 0.2s ease-in-out;
-}
-
-#lang-switcher button.active {
-    background-color: #007bff;
-    color: white;
-    border-color: #007bff;
-}
-#lang-switcher button.active {
-    color: #007bff;
 }
