@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     startBtn.addEventListener('click', startGame);
-    retryBtn.addEventListener('click', startGame);
+    retryBtn.addEventListener('click', () => { showScreen('intro'); });
     langSwitcher.addEventListener('click', (e) => {
         if (e.target.tagName === 'BUTTON') {
             const lang = e.target.dataset.lang;
