@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- 기본 언어를 한국어로 설정 -->
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -7,28 +8,33 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- ★★★★★ 언어 선택기 추가 ★★★★★ -->
+    <div id="lang-switcher">
+        <button data-lang="ko" class="active">한국어</button>
+        <button data-lang="en">English</button>
+    </div>
+
     <div class="container">
         <main id="main-content">
             <header class="intro">
-                <h1>생각 멈추고 나에게 맡겨.</h1>
-                <button id="start-btn">오늘은?</button>
+                <h1 id="intro-title"></h1>
+                <button id="start-btn"></button>
             </header>
             <div id="question-area" class="hidden">
             </div>
         </main>
         <section id="result-container" class="hidden">
             <img id="chef-image" src="" alt="근엄한 셰프" class="chef-image">
-            <!-- ★★★★★ 문구 변경 ★★★★★ -->
-            <h2>오늘은? 이거야!</h2>
+            <h2 id="result-title"></h2>
             <div id="food-recommendation">
                 <h3 id="food-name"></h3>
                 <p id="food-description"></p>
             </div>
-            <button id="retry-btn">다시 추천받기</button>
+            <button id="retry-btn"></button>
         </section>
     </div>
     <footer class="disclaimer hidden">
-        <p>건강이 가장 중요합니다. 현재 건강을 위한 선택을 하세요.</p>
+        <p id="disclaimer-text"></p>
     </footer>
     <script src="script.js"></script>
 </body>
