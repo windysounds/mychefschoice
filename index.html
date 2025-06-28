@@ -5,23 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>셰프의 메뉴 추천</title>
     <link rel="stylesheet" href="style.css">
-    <!-- 애드센스 코드는 나중에 여기에! -->
 </head>
 <body>
     <div class="container">
-        <!-- 시작 화면과 질문이 표시될 영역 -->
         <main id="main-content">
             <header class="intro">
                 <h1>생각 멈추고 나에게 맡겨.</h1>
-                <!-- ★★★★★ 문구 변경 ★★★★★ -->
                 <button id="start-btn">오늘은?</button>
             </header>
             <div id="question-area" class="hidden">
-                <!-- 질문이 여기에 동적으로 표시됩니다. -->
             </div>
         </main>
-
-        <!-- 결과 화면 -->
         <section id="result-container" class="hidden">
             <img id="chef-image" src="" alt="근엄한 셰프" class="chef-image">
             <h2>오늘은... 이걸 드시죠.</h2>
@@ -32,6 +26,10 @@
             <button id="retry-btn">다시 추천받기</button>
         </section>
     </div>
+    <!-- ★★★★★ 추가된 부분 ★★★★★ -->
+    <footer class="disclaimer hidden">
+        <p>건강이 가장 중요합니다. 현재 건강을 위한 선택을 하세요.</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
