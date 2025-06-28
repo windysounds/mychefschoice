@@ -3,28 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>셰프의 메뉴 추천</title>
+    <!-- ★★★★★ 웹사이트 제목 변경 ★★★★★ -->
+    <title>My Chef's Choice</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- 나머지 HTML 구조는 이전과 동일합니다. -->
     <div id="lang-switcher">
         <button data-lang="ko" class="active">한국어</button>
         <button data-lang="en">English</button>
     </div>
 
     <div class="container">
-        <!-- Version B의 메인 콘텐츠 영역 -->
         <main id="main-content">
             <div class="intro">
-                <!-- JS가 intro-chef-image.png를 추가할 영역 -->
                 <h1 id="intro-title"></h1>
                 <button id="start-btn"></button>
             </div>
             <div id="question-area" class="hidden"></div>
         </main>
-
-        <!-- Version B의 결과 영역 -->
         <section id="result-container" class="hidden">
             <img id="chef-image" src="chef-result.png" alt="추천하는 셰프" class="chef-image">
             <h2 id="result-title"></h2>
@@ -34,17 +32,13 @@
             </div>
             <button id="retry-btn"></button>
         </section>
-
-        <!-- ★★★ Version A의 소개/개인정보 페이지가 표시될 영역 ★★★ -->
         <section id="static-content" class="hidden"></section>
     </div>
 
-    <!-- Version B의 하단 문구 영역 -->
     <footer id="disclaimer" class="disclaimer hidden">
         <p id="disclaimer-text"></p>
     </footer>
 
-    <!-- ★★★ Version A의 페이지 이동 푸터 ★★★ -->
     <footer id="site-footer" class="site-footer">
         <div class="footer-links">
             <button class="nav-btn" data-page="home">홈</button> |
@@ -53,7 +47,7 @@
             <button class="nav-btn" data-page="contact">문의하기</button>
         </div>
         <div class="copyright">
-            © 2024 My Chef. All Rights Reserved.
+            © 2024 My Chef's Choice. All Rights Reserved.
         </div>
     </footer>
 
