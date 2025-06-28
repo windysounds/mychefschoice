@@ -1,16 +1,30 @@
 /* 기본 스타일 */
-body { font-family: 'Noto Sans KR', sans-serif; background-color: #f5f5f5; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
-.container { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); text-align: center; max-width: 500px; }
+body { font-family: 'Noto Sans KR', sans-serif; background-color: #f5f5f5; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+.container { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); text-align: center; max-width: 500px; width: 90%; }
+
+.hidden { display: none !important; }
+
+/* 시작 화면 */
+.intro h1 { margin-bottom: 30px; }
 
 /* 질문 영역 */
-.question-box { margin-bottom: 20px; }
-.question-box h3 { margin-bottom: 10px; }
-.options button { background-color: #eee; border: 1px solid #ddd; padding: 10px 15px; margin: 5px; border-radius: 8px; cursor: pointer; }
-.options button.selected { background-color: #007bff; color: white; border-color: #007bff; }
+.question-box { animation: fadeIn 0.5s ease-in-out; }
+.question-box h3 { margin-bottom: 20px; font-size: 1.4em; }
+.options { display: flex; flex-direction: column; gap: 10px; }
+.options button { background-color: #eee; border: 1px solid #ddd; padding: 15px; border-radius: 8px; cursor: pointer; font-size: 1em; transition: background-color 0.2s, color 0.2s; }
+.options button:hover { background-color: #ddd; }
 
 /* 결과 영역 */
-.hidden { display: none; }
-.chef-image { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; }
+#result-container { animation: fadeIn 0.5s ease-in-out; }
+.chef-image { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; background-color: #ccc; }
 #food-name { color: #d32f2f; font-size: 1.8em; }
-#retry-btn, #get-result-btn { background-color: #28a745; color: white; border: none; padding: 12px 25px; font-size: 1.1em; border-radius: 8px; cursor: pointer; margin-top: 20px; }
-#retry-btn:hover, #get-result-btn:hover { background-color: #218838; }
+
+/* 버튼 공통 */
+#start-btn, #retry-btn { background-color: #28a745; color: white; border: none; padding: 12px 25px; font-size: 1.1em; border-radius: 8px; cursor: pointer; margin-top: 20px; transition: background-color 0.2s; }
+#start-btn:hover, #retry-btn:hover { background-color: #218838; }
+
+/* 페이드인 애니메이션 */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
