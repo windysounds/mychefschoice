@@ -5,12 +5,13 @@ body {
     font-family: 'Noto Sans KR', sans-serif;
     background-color: #f5f5f5;
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* ★★★ 콘텐츠를 세로로 쌓기 위해 변경 ★★★ */
     align-items: center; 
     min-height: 100vh;
     margin: 0;
-    /* ★★★ 하단 고정 요소(광고, 푸터)들을 위한 공간 확보 ★★★ */
-    padding-bottom: 200px;
+    padding-top: 80px; /* 상단 언어 선택기 공간 확보 */
+    /* ★★★ 하단 고정 푸터 공간만 확보 (광고는 자연 흐름에 맡김) ★★★ */
+    padding-bottom: 80px; 
 }
 
 .container {
@@ -21,15 +22,17 @@ body {
     text-align: center;
     max-width: 500px;
     width: 90%;
+    /* ★★★ body가 flex-direction:column이 되면서 추가 ★★★ */
+    margin-bottom: auto; 
 }
 
 .hidden {
     display: none !important;
 }
 
-/* 언어 선택기 스타일 (상단 중앙) */
+/* 언어 선택기 스타일 (상단 고정) */
 #lang-switcher {
-    position: absolute;
+    position: fixed; /* 상단에 고정 */
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
@@ -38,50 +41,23 @@ body {
     z-index: 100;
 }
 
-#lang-switcher button {
-    background: #ffffff;
-    border: 1px solid #ddd;
-    padding: 8px 16px;
-    cursor: pointer;
-    font-size: 0.9em;
-    color: #333;
-    font-weight: bold;
-    border-radius: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: all 0.2s ease-in-out;
-}
+/* (이하 다른 스타일은 대부분 동일) */
 
-#lang-switcher button.active {
-    background-color: #007bff;
-    color: white;
-    border-color: #007bff;
-}
-
-#lang-switcher button:not(.active):hover {
-    background-color: #f0f0f0;
-}
-
-/* 시작 화면 */
 .intro h1 {
     margin-bottom: 30px;
 }
-
-/* 질문 영역 */
 .question-box {
     animation: fadeIn 0.5s ease-in-out;
 }
-
 .question-box h3 {
     margin-bottom: 20px;
     font-size: 1.4em;
 }
-
 .options {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-
 .options button {
     background-color: #eee;
     border: 1px solid #ddd;
@@ -91,16 +67,12 @@ body {
     font-size: 1em;
     transition: background-color 0.2s, color 0.2s;
 }
-
 .options button:hover {
     background-color: #ddd;
 }
-
-/* 결과 영역 */
 #result-container {
     animation: fadeIn 0.5s ease-in-out;
 }
-
 .chef-image {
     width: 180px;
     height: 180px;
@@ -109,13 +81,10 @@ body {
     margin-bottom: 20px;
     background-color: #ccc;
 }
-
 #food-name {
     color: #d32f2f;
     font-size: 1.8em;
 }
-
-/* 버튼 공통 */
 #start-btn, #retry-btn {
     background-color: #28a745;
     color: white;
@@ -127,7 +96,6 @@ body {
     margin-top: 20px;
     transition: background-color 0.2s;
 }
-
 #start-btn:hover, #retry-btn:hover {
     background-color: #218838;
 }
@@ -135,7 +103,7 @@ body {
 /* 하단 문구 스타일 (disclaimer) */
 #disclaimer {
     position: fixed;
-    bottom: 60px; 
+    bottom: 60px; /* 푸터 높이에 맞춰 조정 */
     left: 0;
     width: 100%;
     text-align: center;
@@ -147,24 +115,19 @@ body {
     z-index: 10;
 }
 
-/* ★★★ 광고 영역 - 화면 하단에 고정되도록 수정 ★★★ */
+/* ★★★ 광고 영역 - 페이지 흐름에 따라 자연스럽게 위치하도록 수정 ★★★ */
 #adsense-ad {
-    position: fixed;
-    bottom: 65px;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-top: 40px; /* 메인 컨테이너와의 간격 */
     width: 320px;
     height: 100px;
-    z-index: 15;
+    /* position:fixed 와 다른 속성들을 모두 제거하여 일반 블록처럼 동작하게 함 */
 }
 
-/* 페이드인 애니메이션 */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* SPA 페이지와 하단 푸터를 위한 스타일 */
 #static-content {
     text-align: left;
     animation: fadeIn 0.5s ease-in-out;
@@ -185,6 +148,7 @@ body {
     text-decoration: underline;
 }
 
+/* 푸터는 계속 화면 하단에 고정 */
 .site-footer {
     position: fixed;
     bottom: 0;
