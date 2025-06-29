@@ -33,52 +33,56 @@
 </head>
 
 <body>
+    <!-- 화면에 고정되는 요소들 -->
     <div id="lang-switcher">
         <button data-lang="ko" class="active">한국어</button>
         <button data-lang="en">English</button>
     </div>
 
-    <div class="container">
-        <main id="main-content">
-            <div class="intro">
-                <h1 id="intro-title"></h1>
-                <button id="start-btn"></button>
-            </div>
-            <div id="question-area" class="hidden"></div>
-        </main>
+    <!-- ★★★ 스크롤되는 모든 콘텐츠를 감싸는 새로운 '래퍼'를 추가합니다 ★★★ -->
+    <div class="main-wrapper">
+        <div class="container">
+            <main id="main-content">
+                <div class="intro">
+                    <h1 id="intro-title"></h1>
+                    <button id="start-btn"></button>
+                </div>
+                <div id="question-area" class="hidden"></div>
+            </main>
 
-        <section id="result-container" class="hidden">
-            <img
-                id="chef-image"
-                src="chef-result.png"
-                alt="추천하는 셰프"
-                class="chef-image"
-            />
-            <h2 id="result-title"></h2>
-            <div id="food-recommendation">
-                <h3 id="food-name"></h3>
-                <p id="food-description"></p>
-            </div>
-            <button id="retry-btn"></button>
-        </section>
+            <section id="result-container" class="hidden">
+                <img
+                    id="chef-image"
+                    src="chef-result.png"
+                    alt="추천하는 셰프"
+                    class="chef-image"
+                />
+                <h2 id="result-title"></h2>
+                <div id="food-recommendation">
+                    <h3 id="food-name"></h3>
+                    <p id="food-description"></p>
+                </div>
+                <button id="retry-btn"></button>
+            </section>
 
-        <section id="static-content" class="hidden"></section>
-    </div>
+            <section id="static-content" class="hidden"></section>
+        </div>
 
-    <!-- 광고 영역 위치는 여기가 좋습니다 -->
-    <div id="adsense-ad">
-        <ins
-            class="adsbygoogle"
-            style="display:inline-block; width:320px; height:100px"
-            data-ad-client="ca-pub-9086600247125565"
-            data-ad-slot="YOUR_AD_SLOT_ID"
-            ></ins
-        >
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </div>
+        <div id="adsense-ad">
+            <ins
+                class="adsbygoogle"
+                style="display:inline-block; width:320px; height:100px"
+                data-ad-client="ca-pub-9086600247125565"
+                data-ad-slot="YOUR_AD_SLOT_ID"
+                ></ins
+            >
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div> <!-- ★★★ main-wrapper가 여기서 끝납니다 ★★★ -->
 
+    <!-- 화면에 고정되는 요소들 -->
     <footer id="disclaimer" class="disclaimer hidden">
         <p id="disclaimer-text"></p>
     </footer>
