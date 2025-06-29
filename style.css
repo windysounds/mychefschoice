@@ -4,11 +4,9 @@
 body {
     font-family: 'Noto Sans KR', sans-serif;
     background-color: #f5f5f5;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    min-height: 100vh;
     margin: 0;
+    min-height: 100vh;
+    /* flex 레이아웃 제거해서 메인 레이아웃 간섭 방지 */
 }
 
 .container {
@@ -17,9 +15,9 @@ body {
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     text-align: center;
-    max-width: 500px;  /* 메인영역 최대 너비 */
+    max-width: 500px;
     width: 90%;
-    margin: 0 auto;    /* 가운데 정렬 */
+    margin: 40px auto 80px auto; /* 위 40px, 아래 80px 여백 */
 }
 
 .hidden {
@@ -173,15 +171,14 @@ body {
     text-decoration: underline;
 }
 
-/* 애드센스 광고 영역 - 하단 푸터 위 */
+/* 애드센스 광고 영역 */
 #adsense-container {
-    width: 100%;
     max-width: 500px;
-    margin: 10px auto 60px auto;
+    margin: 0 auto 20px auto;
     text-align: center;
 }
 
-/* 하단 고정 푸터 */
+/* 고정 푸터 */
 .site-footer {
     position: fixed;
     bottom: 0;
@@ -195,13 +192,24 @@ body {
     z-index: 20;
 }
 .footer-links button.nav-btn {
-    background: none; border: none; color: #555; cursor: pointer;
-    font-size: 1em; padding: 0; margin: 0 10px;
+    background: none;
+    border: none;
+    color: #555;
+    cursor: pointer;
+    font-size: 1em;
+    padding: 0;
+    margin: 0 10px;
     font-family: inherit;
 }
 .footer-links button.nav-btn.active {
     font-weight: bold;
     color: #007bff;
 }
-.footer-links button.nav-btn:hover { text-decoration: underline; }
-.copyright { color: #888; margin-top: 5px; font-size: 0.8em; }
+.footer-links button.nav-btn:hover {
+    text-decoration: underline;
+}
+.copyright {
+    color: #888;
+    margin-top: 5px;
+    font-size: 0.8em;
+}
