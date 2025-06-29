@@ -1,32 +1,15 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <!-- ★★★★★ 이 <head> 섹션이 완전히 새로워졌습니다. ★★★★★ -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- 1. 기본 SEO 태그 -->
     <title>오늘의 메뉴 추천 | My Chef의 선택</title>
     <meta name="description" content="선택장애 해결! 버튼 하나로 점심, 저녁 메뉴를 랜덤으로 추천받으세요. 한식, 중식, 일식, 양식 등 다양한 메뉴를 지금 바로 확인해보세요." />
-    
-    <!-- ✅ 수정된 도메인 주소 반영 -->
     <link rel="canonical" href="https://www.my-chefs-choice.com" />
 
-    <!-- 2. 소셜 미디어 공유를 위한 오픈 그래프(Open Graph) 태그 -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="오늘의 메뉴 추천 | My Chef의 선택" />
-    <meta property="og:description" content="오늘 뭐 먹지? 고민될 땐, My Chef의 선택! 버튼 하나로 메뉴를 추천받으세요." />
-    <meta property="og:image" content="https://www.my-chefs-choice.com/og-image.png" />
-    <meta property="og:url" content="https://www.my-chefs-choice.com" />
-    <meta property="og:site_name" content="My Chef's Choice" />
+    <!-- 오픈 그래프, 트위터 태그 생략 (필요하면 넣으세요) -->
 
-    <!-- 3. 트위터 공유를 위한 태그 -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="오늘의 메뉴 추천 | My Chef의 선택" />
-    <meta name="twitter:description" content="오늘 뭐 먹지? 고민될 땐, My Chef의 선택! 버튼 하나로 메뉴를 추천받으세요." />
-    <meta name="twitter:image" content="https://www.my-chefs-choice.com/og-image.png" />
-
-    <!-- 4. 폰트 및 스타일시트 연결 -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
@@ -50,12 +33,7 @@
         </main>
         
         <section id="result-container" class="hidden">
-            <img
-              id="chef-image"
-              src="chef-result.png"
-              alt="추천하는 셰프"
-              class="chef-image"
-            />
+            <img id="chef-image" src="chef-result.png" alt="추천하는 셰프" class="chef-image" />
             <h2 id="result-title"></h2>
             <div id="food-recommendation">
                 <h3 id="food-name"></h3>
@@ -67,19 +45,23 @@
         <section id="static-content" class="hidden"></section>
     </div>
 
-    <!-- 애드센스 광고 영역 (container 밖, 푸터 바로 위) -->
+    <footer id="disclaimer" class="disclaimer hidden">
+        <p id="disclaimer-text"></p>
+    </footer>
+
+    <!-- 광고 영역: container 밖, site-footer 위 -->
     <div id="adsense-container">
         <script async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-9086600247125565"
           crossorigin="anonymous"></script>
         <ins class="adsbygoogle"
-          style="display:block"
-          data-ad-client="pub-9086600247125565"
-          data-ad-slot="1234567890"
-          data-ad-format="auto"
-          data-full-width-responsive="true"></ins>
+             style="display:block"
+             data-ad-client="pub-9086600247125565"
+             data-ad-slot="1234567890"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
         <script>
-          (adsbygoogle = window.adsbygoogle || []).push({});
+             (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
     </div>
 
@@ -90,7 +72,9 @@
             <button class="nav-btn" data-page="privacy">개인정보 처리방침</button> |
             <button class="nav-btn" data-page="contact">문의하기</button>
         </div>
-        <div class="copyright">© 2025 My Chef's Choice. All Rights Reserved.</div>
+        <div class="copyright">
+            © 2025 My Chef's Choice. All Rights Reserved.
+        </div>
     </footer>
 
     <script src="script.js"></script>
