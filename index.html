@@ -3,13 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- ★★★★★ 웹사이트 제목 변경 ★★★★★ -->
-    <title>My Chef's Choice</title>
+
+    <!-- ★★★★★ SEO를 위한 최종 수정 사항 (1/2) ★★★★★ -->
+    <!-- 기본 페이지 제목을 SEO에 유리한 한국어 버전으로 설정합니다. -->
+    <title>오늘의 메뉴 추천 | My Chef의 선택</title>
+
+    <!-- ★★★★★ SEO를 위한 최종 수정 사항 (2/2) ★★★★★ -->
+    <!-- 검색 결과에 표시될 사이트 설명을 추가합니다. 이 태그는 클릭률에 매우 중요합니다. -->
+    <meta name="description" content="선택장애 해결! 버튼 하나로 점심, 저녁 메뉴를 랜덤으로 추천받으세요. 한식, 중식, 일식, 양식 등 다양한 메뉴를 지금 바로 확인해보세요.">
+    
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- 나머지 HTML 구조는 이전과 동일합니다. -->
+    
     <div id="lang-switcher">
         <button data-lang="ko" class="active">한국어</button>
         <button data-lang="en">English</button>
@@ -23,6 +30,7 @@
             </div>
             <div id="question-area" class="hidden"></div>
         </main>
+        
         <section id="result-container" class="hidden">
             <img id="chef-image" src="chef-result.png" alt="추천하는 셰프" class="chef-image">
             <h2 id="result-title"></h2>
@@ -32,6 +40,7 @@
             </div>
             <button id="retry-btn"></button>
         </section>
+
         <section id="static-content" class="hidden"></section>
     </div>
 
