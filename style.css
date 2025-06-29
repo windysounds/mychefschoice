@@ -145,20 +145,6 @@ body {
     z-index: 10;
 }
 
-/* 광고 영역 */
-#adsense-ad {
-    margin: 30px auto 0 auto;
-    width: 320px;
-    height: 100px;
-    display: block;
-    text-align: center;
-}
-
-#adsense-ad ins.adsbygoogle {
-    float: none !important;
-    margin: 0 auto !important;
-}
-
 /* 페이드인 애니메이션 */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
