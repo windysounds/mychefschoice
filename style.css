@@ -9,6 +9,8 @@ body {
     align-items: center; 
     min-height: 100vh;
     margin: 0;
+    /* ★★★ 하단 고정 요소(광고, 푸터)들을 위한 공간 확보 ★★★ */
+    padding-bottom: 200px;
 }
 
 .container {
@@ -145,18 +147,15 @@ body {
     z-index: 10;
 }
 
-/* 광고 영역 */
+/* ★★★ 광고 영역 - 화면 하단에 고정되도록 수정 ★★★ */
 #adsense-ad {
-    margin: 30px auto 0 auto;
+    position: fixed;
+    bottom: 65px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 320px;
     height: 100px;
-    display: block;
-    text-align: center;
-}
-
-#adsense-ad ins.adsbygoogle {
-    float: none !important;
-    margin: 0 auto !important;
+    z-index: 15;
 }
 
 /* 페이드인 애니메이션 */
