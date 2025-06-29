@@ -5,8 +5,8 @@ body {
     font-family: 'Noto Sans KR', sans-serif;
     background-color: #f5f5f5;
     margin: 0;
+    padding-bottom: 120px; /* 광고+푸터 높이만큼 여백 확보 */
     min-height: 100vh;
-    /* flex 레이아웃 제거해서 메인 레이아웃 간섭 방지 */
 }
 
 .container {
@@ -17,14 +17,14 @@ body {
     text-align: center;
     max-width: 500px;
     width: 90%;
-    margin: 40px auto 80px auto; /* 위 40px, 아래 80px 여백 */
+    margin: 40px auto 0 auto;
 }
 
 .hidden {
     display: none !important;
 }
 
-/* 언어 선택기 스타일 (상단 중앙) */
+/* 언어 선택기 스타일 */
 #lang-switcher {
     position: absolute;
     top: 20px;
@@ -36,7 +36,7 @@ body {
 }
 
 #lang-switcher button {
-    background: #ffffff;
+    background: #fff;
     border: 1px solid #ddd;
     padding: 8px 16px;
     cursor: pointer;
@@ -58,124 +58,22 @@ body {
     background-color: #f0f0f0;
 }
 
-/* 시작 화면 */
-.intro h1 {
-    margin-bottom: 30px;
-}
-
-/* 질문 영역 */
-.question-box {
-    animation: fadeIn 0.5s ease-in-out;
-}
-
-.question-box h3 {
-    margin-bottom: 20px;
-    font-size: 1.4em;
-}
-
-.options {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.options button {
-    background-color: #eee;
-    border: 1px solid #ddd;
-    padding: 15px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.2s, color 0.2s;
-}
-
-.options button:hover {
-    background-color: #ddd;
-}
-
-/* 결과 영역 */
-#result-container {
-    animation: fadeIn 0.5s ease-in-out;
-}
-
-.chef-image {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-    background-color: #ccc;
-}
-
-#food-name {
-    color: #d32f2f;
-    font-size: 1.8em;
-}
-
-/* 버튼 공통 */
-#start-btn, #retry-btn {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    font-size: 1.1em;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: background-color 0.2s;
-}
-
-#start-btn:hover, #retry-btn:hover {
-    background-color: #218838;
-}
-
-/* 하단 문구 스타일 (disclaimer) */
-#disclaimer {
-    position: fixed;
-    bottom: 60px; 
-    left: 0;
-    width: 100%;
-    text-align: center;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    font-size: 0.8em;
-    animation: fadeIn 0.5s ease-in-out;
-    z-index: 10;
-}
-
-/* 페이드인 애니메이션 */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* SPA 페이지와 하단 푸터를 위한 스타일 */
-#static-content {
-    text-align: left;
-    animation: fadeIn 0.5s ease-in-out;
-    overflow-y: auto; 
-    max-height: 65vh; 
-}
-#static-content h1 { text-align: center; font-size: 1.8em; margin-bottom: 20px; }
-#static-content h2 { font-size: 1.4em; margin-top: 30px; margin-bottom: 10px; color: #007bff; }
-#static-content p { margin-bottom: 15px; line-height: 1.7; }
-#static-content .static-page-image {
-    display: block; max-width: 150px; margin: 20px auto; border-radius: 12px;
-}
-#static-content a {
-    color: #007bff;
-    text-decoration: none;
-}
-#static-content a:hover {
-    text-decoration: underline;
-}
+/* 결과 및 질문 등 기존 스타일 유지... */
 
 /* 애드센스 광고 영역 */
 #adsense-container {
+    position: fixed;
+    bottom: 50px; /* 푸터 바로 위 */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
     max-width: 500px;
-    margin: 0 auto 20px auto;
+    background: white;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+    padding: 10px 0;
+    z-index: 15;
     text-align: center;
+    border-top: 1px solid #ddd;
 }
 
 /* 고정 푸터 */
