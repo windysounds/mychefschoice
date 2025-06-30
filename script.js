@@ -56,8 +56,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     title_ko: "선택의 역설: 뷔페를 즐기지 못하는 셰프의 이야기", title_en: "The Paradox of Choice: A Chef's Story of Not Enjoying the Buffet",
                     summary_ko: "풍요로운 뷔페 앞에서 오히려 선택의 어려움을 겪는 이유, 그리고 예상치 못한 기쁨에 대하여.", summary_en: "About the difficulty of choice in front of a rich buffet, and the joy of the unexpected.",
                     contents_html_ko: `<img src="blog-image-1.png" alt="뷔페 앞의 셰프" class="blog-post-image"><h2>뷔페라는 달콤한 거짓말</h2><p>세상에는 수많은 음식이 있고, 우리는 매일 선택의 기로에 섭니다. 그 선택은 때로 즐거운 설렘을 주지만, 때로는 보이지 않는 스트레스가 되기도 합니다. 저는 뷔페를 좋아합니다. 언뜻 보면 선택의 폭을 무한히 넓혀주는 관대한 공간처럼 보이기 때문이죠. 하지만 정말 그럴까요? 사실 뷔페에 가는 것은 '뷔페'라는 단 하나의 음식을 먹으러 가는 것과 같습니다. 우리는 여전히 한정된 시간과 위장 속에서, 나의 허기짐을 가장 만족시켜줄 단 몇 가지의 조합을 골라내야 하는 또 다른 선택의 문제와 마주하게 됩니다.</p><h2>기대라는 무거운 짐</h2><p>우리가 하는 모든 '선택'에는 '기대'라는 그림자가 따라붙습니다. 큰마음 먹고 찾아간 맛집, 고심 끝에 고른 메뉴. 그 선택이 행복한 기대를 충족시켜주지 못했을 때, 우리는 실망하고 때로는 자신을 탓하기도 합니다. "아, 왜 이걸 선택했을까!" 하고 말이죠. 기대가 클수록, 실망의 무게도 무거워집니다.</p><h2>우연히 발견한 최고의 한 끼</h2><p>반대로 이런 순간도 있습니다. 시간에 쫓겨, 혹은 아무런 정보 없이 그저 눈앞에 보이는 음식을 선택했을 때. 별 기대 없이 한 입 베어 문 길거리의 닭꼬치가 예상을 뛰어넘는 환상적인 맛을 선사했던 경험. 기대하지 않았기에, 그 기쁨은 훨씬 더 크고 순수하게 다가옵니다.</p><h2>'My Chef의 선택'이 존재하는 이유</h2><p>저는 바로 그 '예상치 못한 기쁨의 순간'을 여러분과 공유하고 싶었습니다. 'My Chef의 선택'은 여러분에게서 '고심하는 선택'과 '과도한 기대'라는 짐을 덜어드립니다. 대신, 저희는 약간의 무작위성과 우연을 선물합니다. 오늘, 당신의 선택이 무엇이 될지는 아무도 모릅니다. 하지만 어쩌면 그 기대하지 않았던 메뉴가, 당신의 하루를 가장 빛나게 해 줄 최고의 한 끼가 될지도 모릅니다. 저희와 함께, 그 즐거운 우연을 만나보시겠어요?</p>`,
-                    contents_html_en: `<img src="blog-image-1.png" alt="Chef in front of a buffet" class="blog-post-image"><h2>The Sweet Lie of the Buffet</h2><p>The world is full of countless foods, and every day, we stand at a crossroads of choice. Sometimes that choice brings joyful anticipation, but at other times, it becomes an unseen stress. I like buffets. At first glance, they seem like generous spaces that infinitely widen the scope of choice. But is that really true? In reality, going to a buffet is like choosing to eat a single dish called "buffet." We still face another problem of choice within the confines of limited time and stomach capacity, having to select just a few combinations that will best satisfy our hunger.</p><h2>The Weight of Expectation</h2><p>Every 'choice' we make is followed by the shadow of 'expectation.' A highly-rated restaurant we decided to visit, a menu item chosen after much deliberation. When that choice fails to meet our happy expectations, we feel disappointed and sometimes even blame ourselves. "Ah, why did I choose this!" we exclaim. The greater the expectation, the heavier the weight of disappointment.</p><h2>The Best Meal Found by Chance</h2><p>Conversely, there are moments like this. When we choose a food simply because it's in front of us, pressed for time or without any prior information. The experience of taking a bite of a street-side chicken skewer without any expectation, only to find it fantastically delicious, far beyond what you imagined. Because there was no expectation, the joy comes as something much larger and purer.</p><h2>The Reason 'My Chef's Choice' Exists</h2><p>It is precisely that 'moment of unexpected joy' that I wanted to share with you. 'My Chef's Choice' relieves you of the burden of 'agonizing choice' and 'excessive expectation.' Instead, we offer you a gift of slight randomness and serendipity. No one knows what your choice will be today. But perhaps, that unexpected menu item might just become the best meal to brighten your entire day. Would you like to encounter that delightful coincidence with us?</p>`
+                    contents_html_en: `<img src="blog-image-1.png" alt="Chef in front of a buffet" class="blog-post-image"><h2>The Sweet Lie of the Buffet</h2><p>The world is full of countless foods, and every day, we stand at a crossroads of choice. Sometimes that choice brings joyful anticipation, but at other times, it becomes an unseen stress. I like buffets. At first glance, they seem like generous spaces that infinitely widen the scope of choice. But is that really true? In reality, going to a buffet is like choosing to eat a single dish called "buffet." We still face another problem of choice within the confines of limited time and stomach capacity, having to select just a few combinations that will best satisfy our hunger.</p><h2>The Weight of Expectation</h2><p>Every 'choice' we make is followed by the shadow of 'expectation.' A highly-rated restaurant we decided to visit, a menu item chosen after much deliberation. When that choice fails to meet our happy expectations, we feel disappointed and sometimes even blame ourselves. "Ah, why did I choose this!" we exclaim. The greater the expectation, the heavier the weight of disappointment.</p><h2>The Best Meal Found by Chance</h2><p>Conversely, there are moments like this. When we choose a food simply because it's in front of us, pressed for time or without any prior information. The experience of taking a bite of a street-side chicken skewer without any expectation, only to find it fantastically delicious, far beyond what you imagined. Because there was no expectation, joy comes as something much larger and purer.</p><h2>The Reason 'My Chef's Choice' Exists</h2><p>It is precisely that 'moment of unexpected joy' that I wanted to share with you. 'My Chef's Choice' relieves you of the burden of 'agonizing choice' and 'excessive expectation.' Instead, we offer you a gift of slight randomness and serendipity. No one knows what your choice will be today. But perhaps, that unexpected menu item might just become the best meal to brighten your entire day. Would you like to encounter that delightful coincidence with us?</p>`
                 },
+                // --- 여기에 두 번째, 세 번째 글을 추가하세요 ---
             ]
         }
     };
@@ -67,6 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let selectedQuestions = [];
     let currentQuestionIndex = 0;
 
+    // 정상 작동하던 코드의 요소 선택 방식 유지
     const langSwitcher = document.getElementById('lang-switcher');
     const introTitle = document.getElementById('intro-title');
     const startBtn = document.getElementById('start-btn');
@@ -82,11 +84,12 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const mainContent = document.getElementById('main-content');
     const resultContainer = document.getElementById('result-container');
-    const pageContent = document.getElementById('page-content');
+    const pageContent = document.getElementById('page-content'); // ★★★ staticContent 대신 사용
     const navButtons = document.querySelectorAll('.nav-btn');
 
     // --- 3. 핵심 함수들 ---
     
+    // ★★★ 뷰 전환 함수를 더 단순하고 명확하게 변경 ★★★
     function showView(view) {
         mainContent.classList.add('hidden');
         resultContainer.classList.add('hidden');
@@ -111,6 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const descriptionTag = document.querySelector('meta[name="description"]');
         if (descriptionTag) descriptionTag.setAttribute('content', translations.pageMeta.description[lang]);
         
+        // ★★★ 정상 작동하던 코드의 UI 텍스트 설정 로직 그대로 유지 ★★★
         introTitle.textContent = translations.ui.intro_title[lang];
         startBtn.textContent = translations.ui.start_btn[lang];
         resultTitle.textContent = translations.ui.result_title[lang];
@@ -123,13 +127,18 @@ document.addEventListener('DOMContentLoaded', () => {
             if(translations.staticPages[lang][textKey]) btn.textContent = translations.staticPages[lang][textKey];
         });
 
-        const activePage = document.querySelector('.nav-btn.active')?.dataset.page;
-        if(activePage && activePage !== 'home' && activePage !== 'result') {
-            handleNavClick(activePage, pageContent.dataset.pageId);
+        // 현재 보이는 페이지 내용도 언어에 맞게 다시 그림
+        const activePageKey = document.querySelector('.nav-btn.active')?.dataset.page;
+        if(activePageKey && activePageKey !== 'home') {
+            renderPageContent(activePageKey, pageContent.dataset.pageId);
         }
     }
 
+    // ★★★ 블로그/정적 페이지를 그리는 새로운 함수 ★★★
     function renderPageContent(pageKey, dataId = null) {
+        pageContent.dataset.pageType = pageKey;
+        pageContent.dataset.pageId = dataId || '';
+
         if (pageKey === 'blog') {
             const blogTitle = translations.staticPages[currentLang].blogTitle;
             const postsHTML = translations.staticPages.blog.map(post => `
@@ -146,15 +155,14 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (pageKey === 'blog-post') {
             const post = translations.staticPages.blog.find(p => p.id === dataId);
             if (post) {
-                pageContent.dataset.pageId = dataId;
                 pageContent.innerHTML = `<div class="blog-post-content"><h1>${post['title_' + currentLang]}</h1><p class="blog-date">${post.date}</p><div class="blog-body">${post['contents_html_' + currentLang]}</div></div>`;
             }
         } else if (['about', 'privacy', 'contact'].includes(pageKey)) {
-            pageContent.dataset.pageId = pageKey;
             pageContent.innerHTML = translations.staticPages[currentLang][pageKey];
         }
     }
     
+    // ★★★ 기존 함수들은 그대로 보존하여 안정성 확보 ★★★
     function startGame() {
         showView('main');
         introScreen.classList.add('hidden');
@@ -208,16 +216,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- 4. 이벤트 리스너 ---
     startBtn.addEventListener('click', startGame);
-    retryBtn.addEventListener('click', () => handleNavClick('home'));
+    
+    retryBtn.addEventListener('click', () => {
+        handleNavClick('home');
+    });
 
     langSwitcher.addEventListener('click', (e) => {
         if (e.target.tagName === 'BUTTON' && e.target.dataset.lang !== currentLang) {
             setLanguage(e.target.dataset.lang);
         }
     });
-
+    
+    // ★★★ 네비게이션 클릭을 처리하는 통합 함수 ★★★
     function handleNavClick(pageKey, dataId = null) {
+        // 'active' 클래스 관리
         navButtons.forEach(b => b.classList.toggle('active', b.dataset.page === pageKey));
+        
         if (pageKey === 'home') {
             showView('main');
             introScreen.classList.remove('hidden');
@@ -232,11 +246,14 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', (e) => handleNavClick(e.target.dataset.page));
     });
 
+    // ★★★ 블로그 글 클릭 이벤트 리스너 ★★★
     pageContent.addEventListener('click', (e) => {
         const postElement = e.target.closest('.blog-post-summary');
         if(postElement) {
             const postId = postElement.dataset.id;
-            handleNavClick('blog-post', postId);
+            // 블로그 목록에서 글 상세로 가는 것이므로, 네비게이션 버튼 상태는 'blog'에 유지
+            navButtons.forEach(b => b.classList.toggle('active', b.dataset.page === 'blog'));
+            renderPageContent('blog-post', postId);
         }
     });
 
