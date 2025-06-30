@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <!-- head 태그 내용은 변경 없습니다 -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>오늘의 메뉴 추천 | My Chef의 선택</title>
@@ -23,32 +22,35 @@
 </head>
 
 <body>
+    <!-- 화면에 고정되는 요소들 -->
     <div id="lang-switcher">
         <button data-lang="ko" class="active">한국어</button>
         <button data-lang="en">English</button>
     </div>
 
+    <!-- 스크롤되는 모든 콘텐츠를 감싸는 래퍼 -->
     <div class="main-wrapper">
         <div class="container">
+            <!-- 메인 기능 (질문/결과) -->
             <main id="main-content">
                 <div class="intro">
                     <h1 id="intro-title"></h1>
                     <button id="start-btn"></button>
                 </div>
                 <div id="question-area" class="hidden"></div>
-                <!-- ★★★★★ 새로 추가된 블로그 섹션 ★★★★★ -->
-                <section id="blog-section" class="blog-section hidden">
-                    <h2 id="blog-title"></h2>
-                    <div id="blog-posts-container"></div>
-                </section>
             </main>
 
             <section id="result-container" class="hidden"></section>
             
-            <!-- ★★★★★ 블로그 본문을 보여줄 새로운 공간 ★★★★★ -->
-            <section id="blog-post-full" class="hidden"></section>
+            <!-- 블로그 목록 섹션 -->
+            <section id="blog-section" class="blog-section hidden">
+                <h2 id="blog-title"></h2>
+                <div id="blog-posts-container"></div>
+            </section>
+            
+            <!-- 블로그 본문 & 정적 페이지 섹션 -->
+            <section id="page-content" class="hidden"></section>
 
-            <section id="static-content" class="hidden"></section>
         </div>
 
         <div id="adsense-ad">
@@ -57,6 +59,7 @@
         </div>
     </div>
 
+    <!-- 화면에 고정되는 요소들 -->
     <footer id="disclaimer" class="disclaimer hidden">
         <p id="disclaimer-text"></p>
     </footer>
@@ -64,7 +67,7 @@
     <footer id="site-footer" class="site-footer">
         <div class="footer-links">
             <button class="nav-btn" data-page="home">홈</button>
-            <button class="nav-btn" data-page="blog">My Chef의 이야기</button> <!-- ★★★ 블로그 메뉴 추가 ★★★ -->
+            <button class="nav-btn" data-page="blog">My Chef의 이야기</button>
             <button class="nav-btn" data-page="about">소개</button>
             <button class="nav-btn" data-page="privacy">개인정보 처리방침</button>
             <button class="nav-btn" data-page="contact">문의하기</button>
