@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
 
     // --- 1. 데이터베이스: 모든 텍스트, 질문, 음식을 한 곳에서 관리 ---
