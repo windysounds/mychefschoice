@@ -1,88 +1,75 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <!-- head 태그 내용은 이전과 동일합니다 -->
+    <!-- ★★★★★ 이 <head> 섹션이 완전히 새로워졌습니다. ★★★★★ -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>오늘의 메뉴 추천 | My Chef의 선택</title>
-    <meta
-        name="description"
-        content="선택장애 해결! 버튼 하나로 점심, 저녁 메뉴를 랜덤으로 추천받으세요. 한식, 중식, 일식, 양식 등 다양한 메뉴를 지금 바로 확인해보세요."
-    />
+    <meta name="description" content="선택장애 해결! 버튼 하나로 점심, 저녁 메뉴를 랜덤으로 추천받으세요. 한식, 중식, 일식, 양식 등 다양한 메뉴를 지금 바로 확인해보세요." />
+
     <link rel="canonical" href="https://www.my-chefs-choice.com" />
+
     <meta property="og:type" content="website" />
     <meta property="og:title" content="오늘의 메뉴 추천 | My Chef의 선택" />
     <meta property="og:description" content="오늘 뭐 먹지? 고민될 땐, My Chef의 선택! 버튼 하나로 메뉴를 추천받으세요." />
     <meta property="og:image" content="https://www.my-chefs-choice.com/og-image.png" />
     <meta property="og:url" content="https://www.my-chefs-choice.com" />
     <meta property="og:site_name" content="My Chef's Choice" />
+
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="오늘의 메뉴 추천 | My Chef의 선택" />
     <meta name="twitter:description" content="오늘 뭐 먹지? 고민될 땐, My Chef의 선택! 버튼 하나로 메뉴를 추천받으세요." />
     <meta name="twitter:image" content="https://www.my-chefs-choice.com/og-image.png" />
-    <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
-    />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" />
     <link rel="stylesheet" href="style.css" />
-    <script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9086600247125565"
-        crossorigin="anonymous"
-    ></script>
+
+    <!-- 애드센스 스크립트 -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9086600247125565"
+     crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <!-- 화면에 고정되는 요소들 -->
     <div id="lang-switcher">
         <button data-lang="ko" class="active">한국어</button>
         <button data-lang="en">English</button>
     </div>
 
-    <!-- ★★★ 스크롤되는 모든 콘텐츠를 감싸는 새로운 '래퍼'를 추가합니다 ★★★ -->
-    <div class="main-wrapper">
-        <div class="container">
-            <main id="main-content">
-                <div class="intro">
-                    <h1 id="intro-title"></h1>
-                    <button id="start-btn"></button>
-                </div>
-                <div id="question-area" class="hidden"></div>
-            </main>
+    <div class="container">
+        <main id="main-content">
+            <div class="intro">
+                <h1 id="intro-title"></h1>
+                <button id="start-btn"></button>
+            </div>
+            <div id="question-area" class="hidden"></div>
+        </main>
 
-            <section id="result-container" class="hidden">
-                <img
-                    id="chef-image"
-                    src="chef-result.png"
-                    alt="추천하는 셰프"
-                    class="chef-image"
-                />
-                <h2 id="result-title"></h2>
-                <div id="food-recommendation">
-                    <h3 id="food-name"></h3>
-                    <p id="food-description"></p>
-                </div>
-                <button id="retry-btn"></button>
-            </section>
+        <section id="result-container" class="hidden">
+            <img id="chef-image" src="chef-result.png" alt="추천하는 셰프" class="chef-image" />
+            <h2 id="result-title"></h2>
+            <div id="food-recommendation">
+                <h3 id="food-name"></h3>
+                <p id="food-description"></p>
+            </div>
+            <button id="retry-btn"></button>
+        </section>
 
-            <section id="static-content" class="hidden"></section>
-        </div>
+        <section id="static-content" class="hidden"></section>
+    </div>
 
-        <div id="adsense-ad">
-            <ins
-                class="adsbygoogle"
-                style="display:inline-block; width:320px; height:100px"
-                data-ad-client="ca-pub-9086600247125565"
-                data-ad-slot="YOUR_AD_SLOT_ID"
-                ></ins
-            >
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
-    </div> <!-- ★★★ main-wrapper가 여기서 끝납니다 ★★★ -->
+    <!-- 광고 영역 -->
+    <div class="adsense-footer-ad">
+        <ins class="adsbygoogle"
+            style="display:inline-block;width:320px;height:100px"
+            data-ad-client="ca-pub-9086600247125565"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
 
-    <!-- 화면에 고정되는 요소들 -->
     <footer id="disclaimer" class="disclaimer hidden">
         <p id="disclaimer-text"></p>
     </footer>
