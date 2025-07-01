@@ -76,8 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
+    // ★★★★★ 문제의 if문을 제거한 정상적인 함수 ★★★★★
     function setLanguage(lang) {
-        if (currentLang === lang) return;
         currentLang = lang;
         document.documentElement.lang = lang;
         langSwitcher.querySelectorAll('button').forEach(btn => btn.classList.toggle('active', btn.dataset.lang === lang));
@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (activeStaticPage && activeStaticPage !== 'home' && !resultContainer.classList.contains('hidden')) {
         } else if (activeStaticPage && activeStaticPage !== 'home') {
             const pageKey = activeStaticPage;
-            if (translations.staticPages[currentLang][pageKey]) {
+            if (translations.staticPages[currentLang] && translations.staticPages[currentLang][pageKey]) {
                 staticContent.innerHTML = translations.staticPages[currentLang][pageKey];
             }
         }
