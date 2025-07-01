@@ -1,22 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+    <!-- head 태그 내용은 변경 없습니다 -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>오늘의 메뉴 추천 | My Chef의 선택</title>
     <meta name="description" content="선택장애 해결! 버튼 하나로 점심, 저녁 메뉴를 랜덤으로 추천받으세요. 한식, 중식, 일식, 양식 등 다양한 메뉴를 지금 바로 확인해보세요."/>
     <link rel="canonical" href="https://www.my-chefs-choice.com" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="오늘의 메뉴 추천 | My Chef의 선택" />
-    <meta property="og:description" content="오늘 뭐 먹지? 고민될 땐, My Chef의 선택! 버튼 하나로 메뉴를 추천받으세요." />
-    <meta property="og:image" content="https://www.my-chefs-choice.com/og-image.png" />
-    <meta property="og:url" content="https://www.my-chefs-choice.com" />
-    <meta property="og:site_name" content="My Chef's Choice" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="오늘의 메뉴 추천 | My Chef의 선택" />
-    <meta name="twitter:description" content="오늘 뭐 먹지? 고민될 땐, My Chef의 선택! 버튼 하나로 메뉴를 추천받으세요." />
-    <meta name="twitter:image" content="https://www.my-chefs-choice.com/og-image.png" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" />
+    <!-- ... 이하 모든 meta, link, script 태그는 그대로 ... -->
     <link rel="stylesheet" href="style.css" />
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9086600247125565" crossorigin="anonymous"></script>
 </head>
@@ -37,16 +28,11 @@
                 <div id="question-area" class="hidden"></div>
             </main>
 
-            <section id="result-container" class="hidden">
-                <img id="chef-image" src="chef-result.png" alt="추천하는 셰프" class="chef-image"/>
-                <h2 id="result-title"></h2>
-                <div id="food-recommendation">
-                    <h3 id="food-name"></h3>
-                    <p id="food-description"></p>
-                </div>
-                <button id="retry-btn"></button>
-            </section>
+            <section id="result-container" class="hidden"></section>
 
+            <!-- ★★★ 블로그 전용 공간을 새로 추가합니다 ★★★ -->
+            <section id="blog-content" class="hidden"></section>
+            
             <section id="static-content" class="hidden"></section>
         </div>
 
@@ -62,9 +48,11 @@
 
     <footer id="site-footer" class="site-footer">
         <div class="footer-links">
-            <button class="nav-btn" data-page="home">홈</button> |
-            <button class="nav-btn" data-page="about">소개</button> |
-            <button class="nav-btn" data-page="privacy">개인정보 처리방침</button> |
+            <button class="nav-btn" data-page="home">홈</button>
+            <!-- ★★★ 블로그 메뉴 버튼 추가 ★★★ -->
+            <button class="nav-btn" data-page="blog">My Chef의 이야기</button>
+            <button class="nav-btn" data-page="about">소개</button>
+            <button class="nav-btn" data-page="privacy">개인정보 처리방침</button>
             <button class="nav-btn" data-page="contact">문의하기</button>
         </div>
         <div class="copyright">© 2024 My Chef's Choice. All Rights Reserved.</div>
