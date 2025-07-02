@@ -55,6 +55,7 @@ body {
 #page-content h1 { text-align: center; font-size: 1.8em; margin-bottom: 20px; }
 #page-content h2 { font-size: 1.4em; margin-top: 30px; margin-bottom: 10px; color: #007bff; }
 #page-content p { margin-bottom: 15px; line-height: 1.7; }
+#page-content .static-page-image { display: block; max-width: 150px; margin: 20px auto; border-radius: 12px; }
 #page-content a { color: #007bff; text-decoration: none; }
 #page-content a:hover { text-decoration: underline; }
 .blog-section h2 { text-align: center; font-size: 1.8em; margin-bottom: 40px; }
@@ -71,7 +72,7 @@ body {
 .blog-post-content .blog-body p { font-size: 1.05em; line-height: 1.8; }
 .blog-post-content .blog-body h2 { font-size: 1.5em; margin-top: 40px; margin-bottom: 15px; }
 .site-footer { position: fixed; bottom: 0; left: 0; width: 100%; background-color: #fff; border-top: 1px solid #e0e0e0; padding: 10px 0; text-align: center; font-size: 0.9em; z-index: 20; }
-.footer-links button.nav-btn { background: none; border: none; color: #555; cursor: pointer; font-size: 1em; padding: 0; margin: 0 8px; font-family: inherit; }
+.footer-links button.nav-btn { background: none; border: none; color: #555; cursor: pointer; font-size: 1em; padding: 0 8px; font-family: inherit; }
 .footer-links button.nav-btn:not(:last-child)::after { content: '|'; margin-left: 16px; color: #ccc; font-weight: normal; }
 .footer-links button.nav-btn.active { font-weight: bold; color: #007bff; }
 .footer-links button.nav-btn:hover { text-decoration: underline; }
