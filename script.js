@@ -230,12 +230,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- 초기화 실행 ---
-    // 1. 먼저 모든 화면을 '홈' 상태로 설정합니다.
+    initializePage();
+    setLanguage('ko');
     switchView('home');
     document.querySelector('.nav-btn[data-page="home"]').classList.add('active');
-
-    // 2. 그 다음에 페이지의 기본 구조를 만듭니다 (셰프 이미지 등).
-    initializePage();
-
-    // 3. 마지막으로 모든 요소에 텍스트를 채워넣습니다.
-    setLanguage('ko');
+});
