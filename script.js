@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-
+    // --- 1. 데이터베이스 (생략 없이 전체 포함) ---
     const translations = {
         pageMeta: { title: { ko: "오늘의 메뉴 추천 | My Chef의 선택", en: "Menu Recommendation | My Chef's Choice" }, description: { ko: "선택장애 해결! 버튼 하나로 점심, 저녁 메뉴를 랜덤으로 추천받으세요. 한식, 중식, 일식, 양식 등 다양한 메뉴를 지금 바로 확인해보세요.", en: "Can't decide what to eat? Get random menu recommendations for lunch and dinner with a single click. Korean, Chinese, Japanese, Western, and more!" } },
         ui: { intro_title: { ko: "생각 멈추고 나에게 맡겨.", en: "Stop thinking. Leave it to me." }, start_btn: { ko: "오늘은?", en: "Let's Start!" }, result_title: { ko: "오늘은? 이거야!", en: "Today? It's this!" }, retry_btn: { ko: "다시 추천받기", en: "Try Again" }, disclaimer: { ko: "건강이 가장 중요합니다. 현재 건강을 위한 선택을 하세요.", en: "Your health is most important. Please make a healthy choice." } },
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navButtons = document.querySelectorAll('.nav-btn');
     const langSwitcher = document.getElementById('lang-switcher');
 
-    // ★★★ 화면 전환 함수 (버그 수정 완료) ★★★
+    // 화면 전환 함수
     function switchView(viewName, dataId = null) {
         mainContent.classList.add('hidden');
         resultContainer.classList.add('hidden');
@@ -34,13 +34,11 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (viewName === 'home') {
             mainContent.classList.remove('hidden');
-            mainContent.querySelector('.intro').classList.remove('hidden');
-            mainContent.querySelector('#question-area').classList.add('hidden');
-            initializePage(); // 홈으로 돌아올 때 셰프 이미지를 다시 확인
-            setUiText('home');  // 홈 화면 텍스트를 다시 설정
+            const introScreen = mainContent.querySelector('.intro');
+            const questionArea = mainContent.querySelector('#question-area');
+            if (introScreen) introScreen.classList.remove('hidden');
+            if (questionArea) questionArea.classList.add('hidden');
         } else if (viewName === 'result') {
-            resultContainer.classList.remove('hidden');
-            disclaimer.classList.remove('hidden');
             getRecommendation();
         } else if (viewName === 'blog') {
             displayBlogPosts(currentLang);
@@ -54,26 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
-    // ★★★ UI 텍스트 설정 함수 분리 (안전성 확보) ★★★
-    function setUiText(scope) {
-        if (scope === 'home' || scope === 'all') {
-            const introTitle = document.getElementById('intro-title');
-            const startBtn = document.getElementById('start-btn');
-            if(introTitle) introTitle.textContent = translations.ui.intro_title[currentLang];
-            if(startBtn) startBtn.textContent = translations.ui.start_btn[currentLang];
-        }
-        if (scope === 'result' || scope === 'all') {
-             const resultTitle = document.getElementById('result-title');
-             const retryBtn = document.getElementById('retry-btn');
-             if(resultTitle) resultTitle.textContent = translations.ui.result_title[currentLang];
-             if(retryBtn) retryBtn.textContent = translations.ui.retry_btn[currentLang];
-        }
-        if (scope === 'all') {
-            const disclaimerText = document.getElementById('disclaimer-text');
-            if(disclaimerText) disclaimerText.textContent = translations.ui.disclaimer[currentLang];
-        }
-    }
-    
+    // 언어 설정 함수 (안전하게 수정)
     function setLanguage(lang) {
         currentLang = lang;
         document.documentElement.lang = lang;
@@ -82,7 +61,13 @@ document.addEventListener('DOMContentLoaded', () => {
         document.title = translations.pageMeta.title[lang];
         document.querySelector('meta[name="description"]').setAttribute('content', translations.pageMeta.description[lang]);
         
-        setUiText('all'); // 모든 UI 텍스트 업데이트
+        const introTitle = document.getElementById('intro-title');
+        const startBtn = document.getElementById('start-btn');
+        if (introTitle) introTitle.textContent = translations.ui.intro_title[lang];
+        if (startBtn) startBtn.textContent = translations.ui.start_btn[lang];
+        
+        const disclaimerText = document.getElementById('disclaimer-text');
+        if (disclaimerText) disclaimerText.textContent = translations.ui.disclaimer[lang];
 
         navButtons.forEach(btn => {
             const pageKey = btn.dataset.page;
@@ -99,8 +84,12 @@ document.addEventListener('DOMContentLoaded', () => {
             else if (pageType === 'blog-post') displayFullBlogPost(pageId, lang);
             else if (pageType === 'static') displayStaticPage(pageId, lang);
         }
+        if (!resultContainer.classList.contains('hidden')) {
+            getRecommendation();
+        }
     }
 
+    // 블로그 및 정적 페이지 표시 함수
     function displayBlogPosts(lang) {
         pageContent.dataset.pageType = 'blog-list';
         pageContent.innerHTML = `
@@ -136,6 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
         pageContent.innerHTML = translations.staticPages[lang][pageKey];
     }
     
+    // 추천 도구 관련 함수
     function startGame() {
         const introScreen = document.querySelector('.intro');
         const questionArea = document.getElementById('question-area');
@@ -204,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // --- 이벤트 리스너 등록 ---
+    // 이벤트 리스너 등록
     document.getElementById('start-btn').addEventListener('click', startGame);
 
     langSwitcher.addEventListener('click', (e) => {
@@ -229,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- 초기화 실행 ---
+    // 초기화
     initializePage();
     setLanguage('ko');
     switchView('home');
