@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
 
 body {
@@ -68,7 +67,23 @@ body {
     background-color: #fff; border-top: 1px solid #e0e0e0;
     padding: 10px 0; text-align: center; font-size: 0.9em; z-index: 20;
 }
-.footer-links button.nav-btn { background: none; border: none; color: #555; cursor: pointer; font-size: 1em; padding: 0; margin: 0 10px; font-family: inherit; }
+.footer-links button.nav-btn { background: none; border: none; color: #555; cursor: pointer; font-size: 1em; padding: 0; margin: 0 8px; font-family: inherit; }
 .footer-links button.nav-btn.active { font-weight: bold; color: #007bff; }
 .footer-links button.nav-btn:hover { text-decoration: underline; }
 .copyright { color: #888; margin-top: 5px; font-size: 0.8em; }
+
+/* --- 블로그 관련 스타일 추가 --- */
+#blog-content { text-align: left; animation: fadeIn 0.5s ease-in-out; overflow-y: auto; max-height: 65vh; }
+.blog-section h2 { text-align: center; font-size: 1.8em; margin-bottom: 40px; color: #333; }
+#blog-posts-container { display: flex; flex-direction: column; gap: 30px; }
+.blog-post-summary { display: flex; align-items: center; gap: 20px; cursor: pointer; transition: background-color 0.2s; padding: 15px; border-radius: 8px; }
+.blog-post-summary:hover { background-color: #f9f9f9; }
+.blog-thumbnail { width: 100px; height: 100px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
+.blog-text-content h3 { margin: 0 0 8px 0; font-size: 1.1em; color: #333; }
+.blog-summary { margin: 0 0 8px 0; color: #555; font-size: 0.9em; }
+.blog-date { font-size: 0.8em; color: #999; }
+.blog-post-content h1 { text-align: center; font-size: 2em; margin-bottom: 10px; color: #333; }
+.blog-post-content .blog-date { display: block; text-align: center; margin-bottom: 30px; color: #888; }
+.blog-post-content .blog-post-image { display: block; width: 100%; max-width: 400px; height: auto; border-radius: 12px; margin: 0 auto 30px auto; }
+.blog-post-content .blog-body p { font-size: 1.05em; line-height: 1.8; color: #333; }
+.blog-post-content .blog-body h2 { font-size: 1.5em; margin-top: 40px; margin-bottom: 15px; color: #007bff; }
