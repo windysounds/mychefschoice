@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     const translations = {
-        // 모든 데이터(questions, food, staticPages)는 당신의 원본 그대로입니다.
+        // 모든 데이터 (pageMeta, ui, questions, food, staticPages, blog)는 이전과 동일하게 유지됩니다.
+        // 모든 질문, 모든 음식, 모든 정적 페이지, 블로그 글 1개가 포함된 완전한 데이터입니다.
         pageMeta: { title: { ko: "오늘의 메뉴 추천 | My Chef의 선택", en: "Menu Recommendation | My Chef's Choice" }, description: { ko: "선택장애 해결! 버튼 하나로 점심, 저녁 메뉴를 랜덤으로 추천받으세요. 한식, 중식, 일식, 양식 등 다양한 메뉴를 지금 바로 확인해보세요.", en: "Can't decide what to eat? Get random menu recommendations for lunch and dinner with a single click. Korean, Chinese, Japanese, Western, and more!" } },
         ui: { intro_title: { ko: "생각 멈추고 나에게 맡겨.", en: "Stop thinking. Leave it to me." }, start_btn: { ko: "오늘은?", en: "Let's Start!" }, result_title: { ko: "오늘은? 이거야!", en: "Today? It's this!" }, retry_btn: { ko: "다시 추천받기", en: "Try Again" }, disclaimer: { ko: "건강이 가장 중요합니다. 현재 건강을 위한 선택을 하세요.", en: "Your health is most important. Please make a healthy choice." } },
         questions: [ { id: 'q_reason', text: {ko: '오늘 메뉴를 고민하는 진짜 이유는?', en: 'What\'s the real reason for your menu indecision?'}, options: [ { text: {ko: '가볍게 먹고 싶어서', en: 'I want something light'} }, { text: {ko: '든든하게 먹고 싶어서', en: 'I want something heavy'} }, { text: {ko: '만들기 귀찮아서', en: 'I\'m too lazy to cook'} } ]}, { id: 'q_staple', text: {ko: '가장 익숙한 주식은 무엇인가요?', en: 'What\'s your go-to carb?'}, options: [ { text: {ko: '빵', en: 'Bread'} }, { text: {ko: '면', en: 'Noodles'} }, { text: {ko: '밥', en: 'Rice'} } ]}, { id: 'q_mood', text: {ko: '오늘 기분은 어때?', en: 'How are you feeling today?'}, options: [ { text: {ko: '행복해', en: 'Happy'} }, { text: {ko: '심심해', en: 'Bored'} }, { text: {ko: '지쳤어', en: 'Tired'} } ]}, { id: 'q_weather', text: {ko: '지금 날씨는 어떤가요?', en: 'How\'s the weather?'}, options: [ { text: {ko: '흐림', en: 'Cloudy'} }, { text: {ko: '맑음', en: 'Sunny'} }, { text: {ko: '비 혹은 눈', en: 'Rainy or Snowy'} } ]}, { id: 'q_drink', text: {ko: '식사 후에 마시고 싶은 건?', en: 'What would you like to drink after your meal?'}, isRandomOptions: true, options: [ { text: {ko: '커피', en: 'Coffee'} }, { text: {ko: '차', en: 'Tea'} }, { text: {ko: '시원한 물', en: 'Cold Water'} }, { text: {ko: '뜨거운 물', en: 'Hot Water'} }, { text: {ko: '탄산 음료', en: 'Soda'} }, { text: {ko: '에너지 드링크', en: 'Energy Drink'} } ]}, { id: 'q_dessert', text: {ko: '디저트를 먹는다면 뭐가 좋겠어?', en: 'If you were to have dessert, what would you choose?'}, options: [ { text: {ko: '초콜릿', en: 'Chocolate'} }, { text: {ko: '과자', en: 'Cookies'} }, { text: {ko: '스무디', en: 'Smoothie'} } ]}, { id: 'q_sport', text: {ko: '갑자기 끌리는 스포츠는?', en: 'Which sport are you suddenly drawn to?'}, isRandomOptions: true, options: [ { text: {ko: '야구', en: 'Baseball'} }, { text: {ko: '농구', en: 'Basketball'} }, { text: {ko: '배구', en: 'Volleyball'} }, { text: {ko: '축구', en: 'Soccer'} }, { text: {ko: '테니스', en: 'Tennis'} }, { text: {ko: '배드민턴', en: 'Badminton'} }, { text: {ko: '핸드볼', en: 'Handball'} } ]}, { id: 'q_movie', text: {ko: '영화를 본다면 장르는?', en: 'If you were to watch a movie, what genre?'}, isRandomOptions: true, options: [ { text: {ko: '로맨스', en: 'Romance'} }, { text: {ko: '판타지', en: 'Fantasy'} }, { text: {ko: '공포', en: 'Horror'} }, { text: {ko: '액션', en: 'Action'} }, { text: {ko: '코미디', en: 'Comedy'} }, { text: {ko: '드라마', en: 'Drama'} } ]}, { id: 'q_animal', text: {ko: '친구가 되고 싶은 동물은?', en: 'Which animal would you want as a friend?'}, isRandomOptions: true, options: [ { text: {ko: '코끼리', en: 'Elephant'} }, { text: {ko: '호랑이', en: 'Tiger'} }, { text: {ko: '사자', en: 'Lion'} }, { text: {ko: '말', en: 'Horse'} }, { text: {ko: '강아지', en: 'Dog'} }, { text: {ko: '고양이', en: 'Cat'} }, { text: {ko: '도마뱀', en: 'Lizard'} }, { text: {ko: '앵무새', en: 'Parrot'} } ]}, { id: 'q_transport', text: {ko: '선호하는 이동 수단은?', en: 'What is your preferred mode of transport?'}, options: [ { text: {ko: '비행기', en: 'Airplane'} }, { text: {ko: '자동차', en: 'Car'} }, { text: {ko: '걷기', en: 'Walking'} } ]}, { id: 'q_scientist', text: {ko: '과학자가 된다면?', en: 'If you were a scientist?'}, options: [ { text: {ko: '우주 개척', en: 'Space Exploration'} }, { text: {ko: '심해 탐사', en: 'Deep Sea Exploration'} }, { text: {ko: '자연 보호', en: 'Nature Conservation'} } ]} ],
@@ -38,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let selectedQuestions = [];
     let currentQuestionIndex = 0;
 
-    // DOM 요소 찾기
     const mainContent = document.getElementById('main-content');
     const introScreen = document.querySelector('.intro');
     const questionArea = document.getElementById('question-area');
@@ -48,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const navButtons = document.querySelectorAll('.nav-btn');
     const langSwitcher = document.getElementById('lang-switcher');
 
-    // 화면 전환 함수
     function switchView(viewName, dataId = null) {
         mainContent.classList.add('hidden');
         resultContainer.classList.add('hidden');
@@ -56,9 +55,9 @@ document.addEventListener('DOMContentLoaded', () => {
         disclaimer.classList.add('hidden');
         
         if (viewName === 'home') {
-            mainContent.classList.remove('hidden');
             introScreen.classList.remove('hidden');
             questionArea.classList.add('hidden');
+            mainContent.classList.remove('hidden');
         } else if (viewName === 'result') {
             getRecommendation();
         } else if (viewName === 'blog') {
@@ -73,8 +72,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
-    // 언어 설정 함수
     function setLanguage(lang) {
+        if (currentLang === lang) return;
         currentLang = lang;
         document.documentElement.lang = lang;
         langSwitcher.querySelectorAll('button').forEach(btn => btn.classList.toggle('active', btn.dataset.lang === lang));
@@ -96,7 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // 현재 보이는 페이지 언어 업데이트
         if (!pageContent.classList.contains('hidden')) {
             const pageType = pageContent.dataset.pageType;
             const pageId = pageContent.dataset.pageId;
@@ -109,7 +107,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // 블로그 및 정적 페이지 표시 함수
     function displayBlogPosts(lang) {
         pageContent.dataset.pageType = 'blog-list';
         pageContent.innerHTML = `
@@ -142,10 +139,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function displayStaticPage(pageKey, lang) {
         pageContent.dataset.pageType = 'static';
         pageContent.dataset.pageId = pageKey;
+        // 기존 staticContent 대신 pageContent를 사용합니다.
         pageContent.innerHTML = translations.staticPages[lang][pageKey];
     }
     
-    // 추천 도구 관련 함수
     function startGame() {
         introScreen.classList.add('hidden');
         questionArea.classList.remove('hidden');
@@ -196,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // 이벤트 리스너 등록
+    // --- 이벤트 리스너 등록 ---
     document.getElementById('start-btn').addEventListener('click', startGame);
     document.getElementById('retry-btn').addEventListener('click', () => {
         document.querySelector('.nav-btn.active')?.classList.remove('active');
@@ -213,12 +210,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const pageKey = e.target.dataset.page;
             navButtons.forEach(b => b.classList.remove('active'));
             e.target.classList.add('active');
-            
-            if(['about', 'privacy', 'contact'].includes(pageKey)) {
-                switchView(`static-${pageKey}`);
-            } else {
-                switchView(pageKey);
-            }
+            // 'static-' 접두사 없이 바로 키를 넘깁니다.
+            switchView(pageKey);
         });
     });
     
@@ -229,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 초기화
+    // --- 초기화 ---
     initializePage();
     setLanguage('ko');
     switchView('home');
