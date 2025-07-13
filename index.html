@@ -27,6 +27,7 @@
         <button data-lang="en">English</button>
     </div>
 
+    <!-- 메뉴 추천 및 결과 표시 영역 -->
     <div class="main-wrapper">
         <div class="container">
             <main id="main-content">
@@ -48,10 +49,22 @@
         </div>
     </div>
 
+    <!-- ✨✨✨ 독립적인 맛집 검색 섹션 (위치 조정) ✨✨✨ -->
+    <section id="standalone-search-section">
+        <h2 id="standalone-search-title"></h2>
+        <div class="search-box">
+            <input type="text" id="standalone-menu-input" />
+            <input type="text" id="standalone-location-input" />
+            <button id="standalone-search-btn"></button>
+        </div>
+    </section>
+
+    <!-- 면책 조항 (결과 화면에서만 보임) -->
     <footer id="disclaimer" class="disclaimer hidden">
         <p id="disclaimer-text"></p>
     </footer>
-
+    
+    <!-- 하단 네비게이션 및 저작권 정보 -->
     <footer id="site-footer" class="site-footer">
         <div class="footer-links">
             <button class="nav-btn" data-page="home">홈</button>
