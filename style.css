@@ -32,8 +32,9 @@ body {
     font-weight: 700;
     transition: all 0.3s ease;
     transform: scale(1);
-    min-width: 110px; /* 버튼의 최소 너비를 지정하여 크기를 동일하게 맞춤 */
-    box-sizing: border-box;
+    width: 110px; /* 버튼의 최소 너비를 지정하여 크기를 동일하게 맞춤 */
+    text-align: center;
+box-sizing: border-box;
 }
 
 #lang-switcher button:first-child {
