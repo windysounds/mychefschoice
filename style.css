@@ -328,3 +328,12 @@ body {
 #result-container:not(.hidden) #food-recommendation {
     animation: zoomIn 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
+/* blog.html의 제목 링크 클릭 문제를 해결하는 코드 */
+.blog-post-summary h3 a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
