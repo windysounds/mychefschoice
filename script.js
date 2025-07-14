@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mainContent.classList.add('hidden');
         resultContainer.classList.add('hidden');
         pageContent.classList.add('hidden');
-        disclaimer.classList.add('hidden');
+        disclaimer.classList.add('hidden'); // ✨✨✨ 화면 전환 시 면책 조항을 먼저 숨깁니다.
         
         if (viewName === 'home') {
             currentRecommendedFoodKey = null;
@@ -133,11 +133,17 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        resultContainer.querySelector('#result-title').textContent = translations.ui.result_title[lang];
-        resultContainer.querySelector('#food-name').textContent = foodData.name;
-        resultContainer.querySelector('#food-description').textContent = foodData.description;
-        resultContainer.querySelector('#retry-btn').textContent = translations.ui.retry_btn[lang];
-        disclaimer.querySelector('#disclaimer-text').textContent = translations.ui.disclaimer[lang];
+        const resultTitleEl = resultContainer.querySelector('#result-title');
+        const foodNameEl = resultContainer.querySelector('#food-name');
+        const foodDescEl = resultContainer.querySelector('#food-description');
+        const retryBtnEl = resultContainer.querySelector('#retry-btn');
+        const disclaimerTextEl = document.getElementById('disclaimer-text');
+
+        if(resultTitleEl) resultTitleEl.textContent = translations.ui.result_title[lang];
+        if(foodNameEl) foodNameEl.textContent = foodData.name;
+        if(foodDescEl) foodDescEl.textContent = foodData.description;
+        if(retryBtnEl) retryBtnEl.textContent = translations.ui.retry_btn[lang];
+        if(disclaimerTextEl) disclaimerTextEl.textContent = translations.ui.disclaimer[lang];
     }
 
     function displayBlogPosts(lang) {
@@ -226,18 +232,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
         resultContainer.innerHTML = `
             <img id="chef-image" src="chef-result.png" alt="추천하는 셰프" class="chef-image"/>
-            <h2 id="result-title">${translations.ui.result_title[currentLang]}</h2>
             <div id="food-recommendation">
+                <h2 id="result-title">${translations.ui.result_title[currentLang]}</h2>
                 <h3 id="food-name">${foodData.name}</h3>
                 <p id="food-description">${foodData.description}</p>
             </div>
             <button id="retry-btn">${translations.ui.retry_btn[currentLang]}</button>
         `;
         
-        // --- ✨✨✨ 문제 해결: '다시 추천받기' 버튼 클릭 시 메인 화면으로 이동하도록 수정 ✨✨✨ ---
         resultContainer.querySelector('#retry-btn').addEventListener('click', () => switchView('home'));
-        
         resultContainer.classList.remove('hidden');
+        
+        // ✨✨✨ 면책 조항을 표시하고 내용을 업데이트하는 로직을 복원했습니다 ✨✨✨
+        const disclaimerText = document.getElementById('disclaimer-text');
+        disclaimerText.textContent = translations.ui.disclaimer[currentLang];
         disclaimer.classList.remove('hidden');
     }
     
