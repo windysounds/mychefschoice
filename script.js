@@ -289,23 +289,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    navButtons.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const pageKey = e.target.dataset.page;
-            navButtons.forEach(b => b.classList.remove('active'));
-            e.target.classList.add('active');
-            switchView(pageKey);
-        });
-    });
-    
-    pageContent.addEventListener('click', (e) => {
-        const postElement = e.target.closest('.blog-post-summary');
-        if (postElement) {
-            navButtons.forEach(b => b.classList.remove('active'));
-            document.querySelector('.nav-btn[data-page="blog"]').classList.add('active');
-            switchView('blog-post', postElement.dataset.id);
-        }
-    });
+
+
 
     initializePage();
     setLanguage('ko');
