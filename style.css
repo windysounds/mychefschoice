@@ -22,6 +22,7 @@ body {
     padding-top: 20px;
 }
 
+/* ✨✨✨ 언어 버튼 애니메이션 효과를 복원했습니다 ✨✨✨ */
 #lang-switcher button {
     background-color: #e9ecef;
     border: 1px solid #dee2e6;
@@ -29,7 +30,8 @@ body {
     cursor: pointer;
     font-size: 0.9rem;
     font-weight: 700;
-    transition: background-color 0.2s, color 0.2s;
+    transition: all 0.3s ease; /* 모든 변화를 부드럽게 */
+    transform: scale(1); /* 기본 크기 */
 }
 
 #lang-switcher button:first-child {
@@ -47,7 +49,10 @@ body {
     background-color: #007bff;
     color: white;
     border-color: #007bff;
+    transform: scale(1.1); /* 활성화 시 살짝 커지는 효과 */
 }
+/* --- 여기까지 수정 --- */
+
 
 /* --- 메인 콘텐츠 레이아웃 --- */
 .main-wrapper {
@@ -155,7 +160,7 @@ body {
     text-align: center;
 }
 
-/* --- ✨✨✨ 면책 조항 애니메이션 효과를 복원했습니다 ✨✨✨ --- */
+/* --- 면책 조항 --- */
 .disclaimer {
     position: fixed;
     bottom: 0;
@@ -327,13 +332,4 @@ body {
 #result-container:not(.hidden) .chef-image,
 #result-container:not(.hidden) #food-recommendation {
     animation: zoomIn 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
-/* blog.html의 제목 링크 클릭 문제를 해결하는 코드 */
-.blog-post-summary h3 a::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
 }
