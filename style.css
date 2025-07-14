@@ -26,15 +26,16 @@ body {
 #lang-switcher button {
     background-color: #e9ecef;
     border: 1px solid #dee2e6;
-    padding: 8px 16px;
+    padding: 8px 20px; /* 좌우 패딩 늘림 */
     cursor: pointer;
     font-size: 0.9rem;
     font-weight: 700;
     transition: all 0.3s ease;
     transform: scale(1);
-    width: 120px; /* 버튼의 최소 너비를 지정하여 크기를 동일하게 맞춤 */
+    min-width: 120px; /* width 대신 min-width 사용 */
     text-align: center;
-box-sizing: border-box;
+    box-sizing: border-box;
+    white-space: nowrap; /* 텍스트 줄바꿈 방지 */
 }
 
 #lang-switcher button:first-child {
