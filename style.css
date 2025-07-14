@@ -22,7 +22,7 @@ body {
     padding-top: 20px;
 }
 
-/* ✨✨✨ 언어 버튼 애니메이션 효과를 복원했습니다 ✨✨✨ */
+/* ✨✨✨ 버튼 크기 문제를 해결했습니다 ✨✨✨ */
 #lang-switcher button {
     background-color: #e9ecef;
     border: 1px solid #dee2e6;
@@ -30,8 +30,10 @@ body {
     cursor: pointer;
     font-size: 0.9rem;
     font-weight: 700;
-    transition: all 0.3s ease; /* 모든 변화를 부드럽게 */
-    transform: scale(1); /* 기본 크기 */
+    transition: all 0.3s ease;
+    transform: scale(1);
+    min-width: 110px; /* 버튼의 최소 너비를 지정하여 크기를 동일하게 맞춤 */
+    box-sizing: border-box;
 }
 
 #lang-switcher button:first-child {
@@ -49,7 +51,7 @@ body {
     background-color: #007bff;
     color: white;
     border-color: #007bff;
-    transform: scale(1.1); /* 활성화 시 살짝 커지는 효과 */
+    transform: scale(1.1);
 }
 /* --- 여기까지 수정 --- */
 
