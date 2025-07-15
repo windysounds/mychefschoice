@@ -93,6 +93,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (pagePath.endsWith('/') || pagePath.endsWith('index.html')) {
             document.title = translations.pageMeta.title[lang];
             document.querySelector('meta[name="description"]').setAttribute('content', translations.pageMeta.description[lang]);
+            // ✨ 메인 페이지의 제목/버튼 번역을 위해 이 부분을 추가합니다.
+            const introTitle = document.getElementById('intro-title');
+            const startBtn = document.getElementById('start-btn');
+            if(introTitle) introTitle.textContent = translations.ui.intro_title[lang];
+            if(startBtn) startBtn.textContent = translations.ui.start_btn[lang];
         }
         else if (pagePath.endsWith('blog.html')) {
             // blog.html 에서는 제목만 번역합니다. 내용은 이미 HTML에 있기 때문에 건드리지 않습니다.
