@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <!-- head 부분은 기존과 동일합니다 -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Chef의 이야기 | My Chef의 선택</title>
@@ -22,42 +21,132 @@
         <div class="container">
             <section id="page-content" data-page-type="blog-list">
                 <div class="blog-section">
-                    <h2>My Chef의 이야기</h2>
+                    <!-- ✨ data-translate-key 추가 -->
+                    <h2 id="blog-page-title" data-translate-key="staticPages.blogTitle">My Chef의 이야기</h2>
                     <div id="blog-posts-container">
                         
-                        <!-- 게시물 카드 전체를 a 태그로 감싸는 가장 간단하고 확실한 구조 -->
-                        <a href="/blog/grilled-salmon-recipe.html" class="blog-card-link">
+                        <!-- ✨✨✨ 아래 모든 블로그 글 목록이 한글 콘텐츠와 번역을 위한 key를 모두 포함하도록 수정되었습니다 ✨✨✨ -->
+
+                        <a href="blog/grilled-salmon-recipe.html" class="blog-card-link">
                             <article class="blog-post-summary" data-id="grilled-salmon-recipe">
-                                <img src="blog-image-11.png" alt="구운 연어 – 간단하면서도 고급스러운 한 끼" class="blog-thumbnail">
+                                <img src="blog-image-11.png" alt="구운 연어 – 간단하면서도 고급스러운 한 끼" class="blog-thumbnail" data-translate-key="staticPages.blog.grilled-salmon-recipe.title">
                                 <div class="blog-text-content">
-                                    <h3>구운 연어 – 간단하면서도 고급스러운 한 끼</h3>
-                                    <p class="blog-summary">건강하고 맛있는 저녁 메뉴로 인기 있는 구운 연어 레시피입니다. 그릴 요리를 할 때는 언제나 화상을 조심하세요.</p>
+                                    <h3 data-translate-key="staticPages.blog.grilled-salmon-recipe.title">구운 연어 – 간단하면서도 고급스러운 한 끼</h3>
+                                    <p class="blog-summary" data-translate-key="staticPages.blog.grilled-salmon-recipe.summary">건강하고 맛있는 저녁 메뉴로 인기 있는 구운 연어 레시피입니다. 그릴 요리를 할 때는 언제나 화상을 조심하세요.</p>
                                     <span class="blog-date">2025-07-13</span>
                                 </div>
                             </article>
                         </a>
 
-                        <a href="/blog/breakfast-burrito-recipe.html" class="blog-card-link">
+                        <a href="blog/breakfast-burrito-recipe.html" class="blog-card-link">
                             <article class="blog-post-summary" data-id="breakfast-burrito-recipe">
-                                <img src="blog-image-10.png" alt="브렉퍼스트 부리토 – 든든하고 간편한 아침 한 끼" class="blog-thumbnail">
+                                <img src="blog-image-10.png" alt="브렉퍼스트 부리토 – 든든하고 간편한 아침 한 끼" class="blog-thumbnail" data-translate-key="staticPages.blog.breakfast-burrito-recipe.title">
                                 <div class="blog-text-content">
-                                    <h3>브렉퍼스트 부리토 – 든든하고 간편한 아침 한 끼</h3>
-                                    <p class="blog-summary">계란, 햄, 치즈, 야채를 또띠아에 꽉 채워 넣고 바삭하게 구워내면, 한 손에 들고 먹기 좋은 완벽한 아침 식사가 완성됩니다.</p>
+                                    <h3 data-translate-key="staticPages.blog.breakfast-burrito-recipe.title">브렉퍼스트 부리토 – 든든하고 간편한 아침 한 끼</h3>
+                                    <p class="blog-summary" data-translate-key="staticPages.blog.breakfast-burrito-recipe.summary">계란, 햄, 치즈, 야채를 또띠아에 꽉 채워 넣고 바삭하게 구워내면, 한 손에 들고 먹기 좋은 완벽한 아침 식사가 완성됩니다.</p>
                                     <span class="blog-date">2025-07-12</span>
                                 </div>
                             </article>
                         </a>
 
-                        <!-- 이런 식으로 모든 게시물 목록을 a 태그로 감싸줍니다. -->
-                        <a href="/blog/udon-recipe.html" class="blog-card-link"><article class="blog-post-summary" data-id="udon-recipe"><img src="blog-image-9.png" class="blog-thumbnail"><div class="blog-text-content"><h3>우동 – 따뜻한 국물과 면의 조화</h3><p class="blog-summary">쫄깃한 식감과 맑고 풍미 깊은 국물이 특징인 우동. 추운 날에 딱 맞는 이 일본식 레시피를 집에서 간편하게 만들어 보세요.</p><span class="blog-date">2025-07-12</span></div></article></a>
-                        <a href="/blog/tomato-pasta-recipe.html" class="blog-card-link"><article class="blog-post-summary" data-id="tomato-pasta-recipe"><img src="blog-image-8.png" class="blog-thumbnail"><div class="blog-text-content"><h3>토마토 파스타 – 오리지널의 품격</h3><p class="blog-summary">신선한 토마토와 올리브오일, 마늘, 바질이 어우러진 클래식 토마토 파스타. 간단한 재료로 깊은 풍미를 끌어내는 레시피입니다.</p><span class="blog-date">2025-07-11</span></div></article></a>
-                        <a href="/blog/poke-bowl-recipe.html" class="blog-card-link"><article class="blog-post-summary" data-id="poke-bowl-recipe"><img src="blog-image-7.png" class="blog-thumbnail"><div class="blog-text-content"><h3>포케볼 – 신선함과 균형의 한 그릇</h3><p class="blog-summary">하와이에서 유래한 요리로, 생선회와 밥, 다양한 채소와 소스를 한 그릇에 담아낸 건강하고 다채로운 식사입니다.</p><span class="blog-date">2025-07-11</span></div></article></a>
-                        <a href="/blog/skillet-pizza-recipe.html" class="blog-card-link"><article class="blog-post-summary" data-id="skillet-pizza-recipe"><img src="blog-image-6.png" class="blog-thumbnail"><div class="blog-text-content"><h3>프라이팬 피자 – 집에서 즐기는 베스트셀러</h3><p class="blog-summary">오븐 없이도 간편하게 만들 수 있는 프라이팬 피자! 바삭한 도우와 녹아내리는 치즈, 풍성한 토핑까지. 프라이팬 하나로 완성해보세요.</p><span class="blog-date">2025-07-11</span></div></article></a>
-                        <a href="/blog/homemade-curry-recipe.html" class="blog-card-link"><article class="blog-post-summary" data-id="homemade-curry-recipe"><img src="blog-image-5.png" class="blog-thumbnail"><div class="blog-text-content"><h3>카레 – 집에서 즐기는 깊은 풍미</h3><p class="blog-summary">전 세계인이 사랑하는 카레. 누구나 무난하게 즐길 수 있는 부드럽고 고소한 돼지고기 카레 레시피를 소개합니다.</p><span class="blog-date">2025-07-09</span></div></article></a>
-                        <a href="/blog/taco-plate-recipe.html" class="blog-card-link"><article class="blog-post-summary" data-id="taco-plate-recipe"><img src="blog-image-4.png" class="blog-thumbnail"><div class="blog-text-content"><h3>타코 플레이트 – 한 접시에 담긴 화려한 맛</h3><p class="blog-summary">멕시코 대표 길거리 음식 타코! 간단하면서도 다양한 재료와 소스 조합으로 풍부한 맛을 즐길 수 있습니다. 집에서도 타코의 매력을 한 접시에 담아볼까요?</p><span class="blog-date">2025-07-07</span></div></article></a>
-                        <a href="/blog/korean-bibimbap-recipe.html" class="blog-card-link"><article class="blog-post-summary" data-id="korean-bibimbap-recipe"><img src="blog-image-3.png" class="blog-thumbnail"><div class="blog-text-content"><h3>비빔밥 레시피: 조화롭게 채소를 즐기는 방법</h3><p class="blog-summary">세계에서 가장 유명한 한식 비빔밥. 먹는 방법을 모르는 사람은 있어도, 그 맛을 쉽게 잊어버리는 사람은 없습니다. 조화로운 야채들이 만들어낸 따뜻한 한 숟가락. 여러분께 소개합니다.</p><span class="blog-date">2025-07-05</span></div></article></a>
-                        <a href="/blog/chefs-secret-recipe.html" class="blog-card-link"><article class="blog-post-summary" data-id="chefs-secret-recipe"><img src="blog-image-2.png" class="blog-thumbnail"><div class="blog-text-content"><h3>셰프의 비밀 레시피: 10분 완성 토마토 달걀 볶음</h3><p class="blog-summary">바쁜 당신을 위한, 맛있고 든든한 초간단 요리. 셰프의 작은 비밀을 공개합니다.</p><span class="blog-date">2025-07-03</span></div></article></a>
-                        <a href="/blog/paradox-of-choice.html" class="blog-card-link"><article class="blog-post-summary" data-id="paradox-of-choice"><img src="blog-image-1.png" class="blog-thumbnail"><div class="blog-text-content"><h3>선택의 역설: 뷔페를 즐기지 못하는 셰프의 이야기</h3><p class="blog-summary">풍요로운 뷔페 앞에서 오히려 선택의 어려움을 겪는 이유, 그리고 예상치 못한 기쁨에 대하여.</p><span class="blog-date">2025-07-01</span></div></article></a>
+                        <a href="blog/udon-recipe.html" class="blog-card-link">
+                            <article class="blog-post-summary" data-id="udon-recipe">
+                                <img src="blog-image-9.png" alt="우동 – 따뜻한 국물과 면의 조화" class="blog-thumbnail" data-translate-key="staticPages.blog.udon-recipe.title">
+                                <div class="blog-text-content">
+                                    <h3 data-translate-key="staticPages.blog.udon-recipe.title">우동 – 따뜻한 국물과 면의 조화</h3>
+                                    <p class="blog-summary" data-translate-key="staticPages.blog.udon-recipe.summary">쫄깃한 식감과 맑고 풍미 깊은 국물이 특징인 우동. 추운 날에 딱 맞는 이 일본식 레시피를 집에서 간편하게 만들어 보세요.</p>
+                                    <span class="blog-date">2025-07-12</span>
+                                </div>
+                            </article>
+                        </a>
+
+                        <a href="blog/tomato-pasta-recipe.html" class="blog-card-link">
+                            <article class="blog-post-summary" data-id="tomato-pasta-recipe">
+                                <img src="blog-image-8.png" alt="토마토 파스타 – 오리지널의 품격" class="blog-thumbnail" data-translate-key="staticPages.blog.tomato-pasta-recipe.title">
+                                <div class="blog-text-content">
+                                    <h3 data-translate-key="staticPages.blog.tomato-pasta-recipe.title">토마토 파스타 – 오리지널의 품격</h3>
+                                    <p class="blog-summary" data-translate-key="staticPages.blog.tomato-pasta-recipe.summary">신선한 토마토와 올리브오일, 마늘, 바질이 어우러진 클래식 토마토 파스타. 간단한 재료로 깊은 풍미를 끌어내는 레시피입니다.</p>
+                                    <span class="blog-date">2025-07-11</span>
+                                </div>
+                            </article>
+                        </a>
+
+                        <a href="blog/poke-bowl-recipe.html" class="blog-card-link">
+                            <article class="blog-post-summary" data-id="poke-bowl-recipe">
+                                <img src="blog-image-7.png" alt="포케볼 – 신선함과 균형의 한 그릇" class="blog-thumbnail" data-translate-key="staticPages.blog.poke-bowl-recipe.title">
+                                <div class="blog-text-content">
+                                    <h3 data-translate-key="staticPages.blog.poke-bowl-recipe.title">포케볼 – 신선함과 균형의 한 그릇</h3>
+                                    <p class="blog-summary" data-translate-key="staticPages.blog.poke-bowl-recipe.summary">하와이에서 유래한 요리로, 생선회와 밥, 다양한 채소와 소스를 한 그릇에 담아낸 건강하고 다채로운 식사입니다.</p>
+                                    <span class="blog-date">2025-07-11</span>
+                                </div>
+                            </article>
+                        </a>
+
+                        <a href="blog/skillet-pizza-recipe.html" class="blog-card-link">
+                            <article class="blog-post-summary" data-id="skillet-pizza-recipe">
+                                <img src="blog-image-6.png" alt="프라이팬 피자 – 집에서 즐기는 베스트셀러" class="blog-thumbnail" data-translate-key="staticPages.blog.skillet-pizza-recipe.title">
+                                <div class="blog-text-content">
+                                    <h3 data-translate-key="staticPages.blog.skillet-pizza-recipe.title">프라이팬 피자 – 집에서 즐기는 베스트셀러</h3>
+                                    <p class="blog-summary" data-translate-key="staticPages.blog.skillet-pizza-recipe.summary">오븐 없이도 간편하게 만들 수 있는 프라이팬 피자! 바삭한 도우와 녹아내리는 치즈, 풍성한 토핑까지. 프라이팬 하나로 완성해보세요.</p>
+                                    <span class="blog-date">2025-07-11</span>
+                                </div>
+                            </article>
+                        </a>
+
+                        <a href="blog/homemade-curry-recipe.html" class="blog-card-link">
+                            <article class="blog-post-summary" data-id="homemade-curry-recipe">
+                                <img src="blog-image-5.png" alt="카레 – 집에서 즐기는 깊은 풍미" class="blog-thumbnail" data-translate-key="staticPages.blog.homemade-curry-recipe.title">
+                                <div class="blog-text-content">
+                                    <h3 data-translate-key="staticPages.blog.homemade-curry-recipe.title">카레 – 집에서 즐기는 깊은 풍미</h3>
+                                    <p class="blog-summary" data-translate-key="staticPages.blog.homemade-curry-recipe.summary">전 세계인이 사랑하는 카레. 누구나 무난하게 즐길 수 있는 부드럽고 고소한 돼지고기 카레 레시피를 소개합니다.</p>
+                                    <span class="blog-date">2025-07-09</span>
+                                </div>
+                            </article>
+                        </a>
+
+                        <a href="blog/taco-plate-recipe.html" class="blog-card-link">
+                            <article class="blog-post-summary" data-id="taco-plate-recipe">
+                                <img src="blog-image-4.png" alt="타코 플레이트 – 한 접시에 담긴 화려한 맛" class="blog-thumbnail" data-translate-key="staticPages.blog.taco-plate-recipe.title">
+                                <div class="blog-text-content">
+                                    <h3 data-translate-key="staticPages.blog.taco-plate-recipe.title">타코 플레이트 – 한 접시에 담긴 화려한 맛</h3>
+                                    <p class="blog-summary" data-translate-key="staticPages.blog.taco-plate-recipe.summary">멕시코 대표 길거리 음식 타코! 간단하면서도 다양한 재료와 소스 조합으로 풍부한 맛을 즐길 수 있습니다. 집에서도 타코의 매력을 한 접시에 담아볼까요?</p>
+                                    <span class="blog-date">2025-07-07</span>
+                                </div>
+                            </article>
+                        </a>
+
+                        <a href="blog/korean-bibimbap-recipe.html" class="blog-card-link">
+                            <article class="blog-post-summary" data-id="korean-bibimbap-recipe">
+                                <img src="blog-image-3.png" alt="비빔밥 레시피: 조화롭게 채소를 즐기는 방법" class="blog-thumbnail" data-translate-key="staticPages.blog.korean-bibimbap-recipe.title">
+                                <div class="blog-text-content">
+                                    <h3 data-translate-key="staticPages.blog.korean-bibimbap-recipe.title">비빔밥 레시피: 조화롭게 채소를 즐기는 방법</h3>
+                                    <p class="blog-summary" data-translate-key="staticPages.blog.korean-bibimbap-recipe.summary">세계에서 가장 유명한 한식 비빔밥. 먹는 방법을 모르는 사람은 있어도, 그 맛을 쉽게 잊어버리는 사람은 없습니다. 조화로운 야채들이 만들어낸 따뜻한 한 숟가락. 여러분께 소개합니다.</p>
+                                    <span class="blog-date">2025-07-05</span>
+                                </div>
+                            </article>
+                        </a>
+
+                        <a href="blog/chefs-secret-recipe.html" class="blog-card-link">
+                            <article class="blog-post-summary" data-id="chefs-secret-recipe">
+                                <img src="blog-image-2.png" alt="셰프의 비밀 레시피: 10분 완성 토마토 달걀 볶음" class="blog-thumbnail" data-translate-key="staticPages.blog.chefs-secret-recipe.title">
+                                <div class="blog-text-content">
+                                    <h3 data-translate-key="staticPages.blog.chefs-secret-recipe.title">셰프의 비밀 레시피: 10분 완성 토마토 달걀 볶음</h3>
+                                    <p class="blog-summary" data-translate-key="staticPages.blog.chefs-secret-recipe.summary">바쁜 당신을 위한, 맛있고 든든한 초간단 요리. 셰프의 작은 비밀을 공개합니다.</p>
+                                    <span class="blog-date">2025-07-03</span>
+                                </div>
+                            </article>
+                        </a>
+                        
+                        <a href="blog/paradox-of-choice.html" class="blog-card-link">
+                            <article class="blog-post-summary" data-id="paradox-of-choice">
+                                <img src="blog-image-1.png" alt="선택의 역설: 뷔페를 즐기지 못하는 셰프의 이야기" class="blog-thumbnail" data-translate-key="staticPages.blog.paradox-of-choice.title">
+                                <div class="blog-text-content">
+                                    <h3 data-translate-key="staticPages.blog.paradox-of-choice.title">선택의 역설: 뷔페를 즐기지 못하는 셰프의 이야기</h3>
+                                    <p class="blog-summary" data-translate-key="staticPages.blog.paradox-of-choice.summary">풍요로운 뷔페 앞에서 오히려 선택의 어려움을 겪는 이유, 그리고 예상치 못한 기쁨에 대하여.</p>
+                                    <span class="blog-date">2025-07-01</span>
+                                </div>
+                            </article>
+                        </a>
 
                     </div>
                 </div>
@@ -66,21 +155,23 @@
     </div>
     
     <section id="standalone-search-section">
-        <h2 id="standalone-search-title">너의 선택은?</h2>
+        <!-- ✨ data-translate-key 추가 -->
+        <h2 id="standalone-search-title" data-translate-key="ui.standalone_search_title">너의 선택은?</h2>
         <div class="search-box">
-            <input type="text" id="standalone-menu-input" placeholder="메뉴 입력 (예: 파스타)" />
-            <input type="text" id="standalone-location-input" placeholder="지역 입력 (예: 홍대, 강남역)" />
-            <button id="standalone-search-btn">맛집 검색</button>
+            <input type="text" id="standalone-menu-input" placeholder="메뉴 입력 (예: 파스타)" data-translate-key="ui.menu_placeholder" />
+            <input type="text" id="standalone-location-input" placeholder="지역 입력 (예: 홍대, 강남역)" data-translate-key="ui.location_placeholder" />
+            <button id="standalone-search-btn" data-translate-key="ui.search_btn_text">맛집 검색</button>
         </div>
     </section>
     
     <footer id="site-footer" class="site-footer">
         <div class="footer-links">
-            <a href="/index.html" class="nav-btn" data-page="home">홈</a>
-            <a href="/blog.html" class="nav-btn active" data-page="blog">My Chef의 이야기</a>
-            <a href="/about.html" class="nav-btn" data-page="about">소개</a>
-            <a href="/privacy.html" class="nav-btn" data-page="privacy">개인정보 처리방침</a>
-            <a href="/contact.html" class="nav-btn" data-page="contact">문의하기</a>
+            <!-- ✨ data-translate-key 추가 -->
+            <a href="index.html" class="nav-btn" data-page="home" data-translate-key="staticPages.navHome">홈</a>
+            <a href="blog.html" class="nav-btn active" data-page="blog" data-translate-key="staticPages.navBlog">My Chef의 이야기</a>
+            <a href="about.html" class="nav-btn" data-page="about" data-translate-key="staticPages.navAbout">소개</a>
+            <a href="privacy.html" class="nav-btn" data-page="privacy" data-translate-key="staticPages.navPrivacy">개인정보 처리방침</a>
+            <a href="contact.html" class="nav-btn" data-page="contact" data-translate-key="staticPages.navContact">문의하기</a>
         </div>
         <div class="copyright">© 2025 My Chef's Choice. All Rights Reserved.</div>
     </footer>
