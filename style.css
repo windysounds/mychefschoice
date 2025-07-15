@@ -22,17 +22,17 @@ body {
     padding-top: 20px;
 }
 
-/* ✨✨✨ 버튼 크기 문제를 해결했습니다 ✨✨✨ */
+/* ✨✨✨ 버튼 폭과 크기 문제를 해결했습니다 ✨✨✨ */
 #lang-switcher button {
     background-color: #e9ecef;
     border: 1px solid #dee2e6;
-    padding: 8px 20px; /* 좌우 패딩 늘림 */
+    padding: 8px 15px; /* [수정] 좌우 패딩을 20px에서 15px로 줄였습니다. */
     cursor: pointer;
     font-size: 0.9rem;
     font-weight: 700;
     transition: all 0.3s ease;
     transform: scale(1);
-    min-width: 120px; /* width 대신 min-width 사용 */
+    min-width: 100px; /* [수정] 최소 너비를 120px에서 100px로 줄였습니다. */
     text-align: center;
     box-sizing: border-box;
     white-space: nowrap; /* 텍스트 줄바꿈 방지 */
@@ -53,7 +53,8 @@ body {
     background-color: #007bff;
     color: white;
     border-color: #007bff;
-    transform: scale(1.1);
+    /* [수정] 활성화 시 커지는 효과를 제거했습니다. */
+    /* transform: scale(1.1); */
 }
 /* --- 여기까지 수정 --- */
 
