@@ -20,6 +20,8 @@ body {
     z-index: 1000;
     text-align: center;
     padding-top: 20px;
+    display: flex;           /* 이 줄 추가 */
+    justify-content: center; /* 이 줄 추가 */
 }
 
 /* ✨✨✨ 버튼 폭과 크기 문제를 해결했습니다 ✨✨✨ */
