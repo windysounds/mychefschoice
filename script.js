@@ -155,6 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateAllTexts(lang) {
         const pagePath = window.location.pathname;
 
+        
         // 공통 UI 요소 번역
         if (langSwitcher) {
             langSwitcher.querySelectorAll('button').forEach(btn => btn.classList.toggle('active', btn.dataset.lang === lang));
