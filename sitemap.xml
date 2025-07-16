@@ -1,21 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- 메인 홈페이지 (index.html은 보통 생략 가능) -->
+  <!-- 메인 홈페이지 -->
   <url>
     <loc>https://my-chefs-choice.com/</loc>
-    <lastmod>2025-07-14</lastmod>
+    <lastmod>2025-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
-  <!-- ✨✨✨ 모든 URL에 .html 확장자를 추가했습니다 ✨✨✨ -->
+  <!-- 블로그 목록 페이지 -->
   <url>
     <loc>https://my-chefs-choice.com/blog.html</loc>
-    <lastmod>2025-07-14</lastmod>
+    <lastmod>2025-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
+  <!-- ▼▼▼ 새로 추가된 레시피 10개 ▼▼▼ -->
+  <url>
+    <loc>https://my-chefs-choice.com/blog/chicken-salad-recipe.html</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://my-chefs-choice.com/blog/cheese-spaghetti-recipe.html</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://my-chefs-choice.com/blog/clam-chowder-recipe.html</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://my-chefs-choice.com/blog/potato-pancakes-recipe.html</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://my-chefs-choice.com/blog/chicken-karaage-recipe.html</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://my-chefs-choice.com/blog/carbonara-recipe.html</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://my-chefs-choice.com/blog/kimchi-fried-rice-recipe.html</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://my-chefs-choice.com/blog/soybean-sprout-soup-recipe.html</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://my-chefs-choice.com/blog/beef-stew-recipe.html</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://my-chefs-choice.com/blog/yubuchobap-recipe.html</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 기존 레시피 -->
   <url>
     <loc>https://my-chefs-choice.com/blog/grilled-salmon-recipe.html</loc>
     <lastmod>2025-07-13</lastmod>
@@ -83,21 +146,19 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- 소개 페이지 -->
+  <!-- 기타 페이지 -->
   <url>
     <loc>https://my-chefs-choice.com/about.html</loc>
     <lastmod>2025-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- 개인정보 처리방침 페이지 -->
   <url>
     <loc>https://my-chefs-choice.com/privacy.html</loc>
     <lastmod>2025-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
-  <!-- 문의하기 페이지 -->
   <url>
     <loc>https://my-chefs-choice.com/contact.html</loc>
     <lastmod>2025-07-14</lastmod>
