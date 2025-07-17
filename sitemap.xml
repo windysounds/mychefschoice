@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- 메인 홈페이지 -->
   <url>
-    <loc>https://my-chefs-choice.com/</loc>
+    <loc>https://www.my-chefs-choice.com/</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -10,69 +10,69 @@
   
   <!-- 블로그 목록 페이지 -->
   <url>
-    <loc>https://my-chefs-choice.com/blog.html</loc>
+    <loc>https://www.my-chefs-choice.com/blog.html</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
-  <!-- ▼▼▼ 새로 추가된 레시피 10개 ▼▼▼ -->
+  <!-- 신규 레시피 10개 -->
   <url>
-    <loc>https://my-chefs-choice.com/blog/chicken-salad-recipe.html</loc>
+    <loc>https://www.my-chefs-choice.com/blog/chicken-salad-recipe.html</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://my-chefs-choice.com/blog/cheese-spaghetti-recipe.html</loc>
+    <loc>https://www.my-chefs-choice.com/blog/cheese-spaghetti-recipe.html</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://my-chefs-choice.com/blog/clam-chowder-recipe.html</loc>
+    <loc>https://www.my-chefs-choice.com/blog/clam-chowder-recipe.html</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://my-chefs-choice.com/blog/potato-pancakes-recipe.html</loc>
+    <loc>https://www.my-chefs-choice.com/blog/potato-pancakes-recipe.html</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://my-chefs-choice.com/blog/chicken-karaage-recipe.html</loc>
+    <loc>https://www.my-chefs-choice.com/blog/chicken-karaage-recipe.html</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://my-chefs-choice.com/blog/carbonara-recipe.html</loc>
+    <loc>https://www.my-chefs-choice.com/blog/carbonara-recipe.html</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://my-chefs-choice.com/blog/kimchi-fried-rice-recipe.html</loc>
+    <loc>https://www.my-chefs-choice.com/blog/kimchi-fried-rice-recipe.html</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://my-chefs-choice.com/blog/soybean-sprout-soup-recipe.html</loc>
+    <loc>https://www.my-chefs-choice.com/blog/soybean-sprout-soup-recipe.html</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://my-chefs-choice.com/blog/beef-stew-recipe.html</loc>
+    <loc>https://www.my-chefs-choice.com/blog/beef-stew-recipe.html</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://my-chefs-choice.com/blog/yubuchobap-recipe.html</loc>
+    <loc>https://www.my-chefs-choice.com/blog/yubuchobap-recipe.html</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -80,67 +80,67 @@
 
   <!-- 기존 레시피 -->
   <url>
-    <loc>https://my-chefs-choice.com/blog/grilled-salmon-recipe.html</loc>
+    <loc>https://www.my-chefs-choice.com/blog/grilled-salmon-recipe.html</loc>
     <lastmod>2025-07-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://my-chefs-choice.com/blog/breakfast-burrito-recipe.html</loc>
+    <loc>https://www.my-chefs-choice.com/blog/breakfast-burrito-recipe.html</loc>
     <lastmod>2025-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://my-chefs-choice.com/blog/udon-recipe.html</loc>
+    <loc>https://www.my-chefs-choice.com/blog/udon-recipe.html</loc>
     <lastmod>2025-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://my-chefs-choice.com/blog/tomato-pasta-recipe.html</loc>
+    <loc>https://www.my-chefs-choice.com/blog/tomato-pasta-recipe.html</loc>
     <lastmod>2025-07-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://my-chefs-choice.com/blog/poke-bowl-recipe.html</loc>
+    <loc>https://www.my-chefs-choice.com/blog/poke-bowl-recipe.html</loc>
     <lastmod>2025-07-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
     <url>
-    <loc>https://my-chefs-choice.com/blog/skillet-pizza-recipe.html</loc>
+    <loc>https://www.my-chefs-choice.com/blog/skillet-pizza-recipe.html</loc>
     <lastmod>2025-07-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://my-chefs-choice.com/blog/homemade-curry-recipe.html</loc>
+    <loc>https://www.my-chefs-choice.com/blog/homemade-curry-recipe.html</loc>
     <lastmod>2025-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://my-chefs-choice.com/blog/taco-plate-recipe.html</loc>
+    <loc>https://www.my-chefs-choice.com/blog/taco-plate-recipe.html</loc>
     <lastmod>2025-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://my-chefs-choice.com/blog/korean-bibimbap-recipe.html</loc>
+    <loc>https://www.my-chefs-choice.com/blog/korean-bibimbap-recipe.html</loc>
     <lastmod>2025-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://my-chefs-choice.com/blog/chefs-secret-recipe.html</loc>
+    <loc>https://www.my-chefs-choice.com/blog/chefs-secret-recipe.html</loc>
     <lastmod>2025-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://my-chefs-choice.com/blog/paradox-of-choice.html</loc>
+    <loc>https://www.my-chefs-choice.com/blog/paradox-of-choice.html</loc>
     <lastmod>2025-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -148,22 +148,21 @@
 
   <!-- 기타 페이지 -->
   <url>
-    <loc>https://my-chefs-choice.com/about.html</loc>
+    <loc>https://www.my-chefs-choice.com/about.html</loc>
     <lastmod>2025-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://my-chefs-choice.com/privacy.html</loc>
+    <loc>https://www.my-chefs-choice.com/privacy.html</loc>
     <lastmod>2025-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://my-chefs-choice.com/contact.html</loc>
+    <loc>https://www.my-chefs-choice.com/contact.html</loc>
     <lastmod>2025-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
- 
   </url>
 </urlset>
